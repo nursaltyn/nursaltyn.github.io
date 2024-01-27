@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_713024c4d4349738bc0aec170cb2fc95 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_713024c4d4349738bc0aec170cb2fc95" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_713024c4d4349738bc0aec170cb2fc95 = L.map(
+                "map_713024c4d4349738bc0aec170cb2fc95",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ecbda4c7eb55bd5fde1fd4d96714851d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_713024c4d4349738bc0aec170cb2fc95);
+        
+    
+            var marker_cluster_48402a850922a1ba2758881a79165782 = L.markerClusterGroup(
+                {}
+            );
+            map_713024c4d4349738bc0aec170cb2fc95.addLayer(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+            var marker_f1a4e107d1a13ab5f7370fdf8d7b6088 = L.marker(
+                [-24.7761086, 134.755],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_631561e2ca6322288ac8175e44e0fff5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75f0274689ee1658ca1fc71f1ccc216b = $(`<div id="html_75f0274689ee1658ca1fc71f1ccc216b" style="width: 100.0%; height: 100.0%;">Australia Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_631561e2ca6322288ac8175e44e0fff5.setContent(html_75f0274689ee1658ca1fc71f1ccc216b);
+            
+        
+
+        marker_f1a4e107d1a13ab5f7370fdf8d7b6088.bindPopup(popup_631561e2ca6322288ac8175e44e0fff5)
+        ;
+
+        
+    
+    
+            var marker_9a19c346913b62f9aa017a15915d5c71 = L.marker(
+                [47.59397, 14.12456],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_1278e254def92b7b897f879344d3c910 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4247320f5369258a72da57fb9fe0d4eb = $(`<div id="html_4247320f5369258a72da57fb9fe0d4eb" style="width: 100.0%; height: 100.0%;">Austria Top Topic: Emotions and relationships</div>`)[0];
+                popup_1278e254def92b7b897f879344d3c910.setContent(html_4247320f5369258a72da57fb9fe0d4eb);
+            
+        
+
+        marker_9a19c346913b62f9aa017a15915d5c71.bindPopup(popup_1278e254def92b7b897f879344d3c910)
+        ;
+
+        
+    
+    
+            var marker_cf6f798949074a06c25d63cfe05c12c1 = L.marker(
+                [53.4250605, 27.6971358],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_452ce3625e670a0d3a036379ddeef88f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21aa601bf214dab9ae9d1ddc6e0755f4 = $(`<div id="html_21aa601bf214dab9ae9d1ddc6e0755f4" style="width: 100.0%; height: 100.0%;">Belarus Top Topic: Emotions and relationships</div>`)[0];
+                popup_452ce3625e670a0d3a036379ddeef88f.setContent(html_21aa601bf214dab9ae9d1ddc6e0755f4);
+            
+        
+
+        marker_cf6f798949074a06c25d63cfe05c12c1.bindPopup(popup_452ce3625e670a0d3a036379ddeef88f)
+        ;
+
+        
+    
+    
+            var marker_7ae7712cf2957ff5b79e5890a62a7675 = L.marker(
+                [-17.0568696, -64.9912286],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_6484e24bd7d0f033dcdc13653b186a24 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bd6daf22ecb0f873ff7697b3aa14380 = $(`<div id="html_8bd6daf22ecb0f873ff7697b3aa14380" style="width: 100.0%; height: 100.0%;">Bolivia Top Topic: Emotions and relationships</div>`)[0];
+                popup_6484e24bd7d0f033dcdc13653b186a24.setContent(html_8bd6daf22ecb0f873ff7697b3aa14380);
+            
+        
+
+        marker_7ae7712cf2957ff5b79e5890a62a7675.bindPopup(popup_6484e24bd7d0f033dcdc13653b186a24)
+        ;
+
+        
+    
+    
+            var marker_634b38dc21f62f012f4dbc7be64107c4 = L.marker(
+                [-10.3333333, -53.2],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_72f4c64887ce6bc555d465817bd6329a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b4def5b5ce3bf6e2856087bf88304a3a = $(`<div id="html_b4def5b5ce3bf6e2856087bf88304a3a" style="width: 100.0%; height: 100.0%;">Brazil Top Topic: Emotions and relationships</div>`)[0];
+                popup_72f4c64887ce6bc555d465817bd6329a.setContent(html_b4def5b5ce3bf6e2856087bf88304a3a);
+            
+        
+
+        marker_634b38dc21f62f012f4dbc7be64107c4.bindPopup(popup_72f4c64887ce6bc555d465817bd6329a)
+        ;
+
+        
+    
+    
+            var marker_43a6840e99526f43b34428a74979d2a1 = L.marker(
+                [61.0666922, -107.991707],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_1add0b46b5a85b70900134cbb82308d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dadddf90820f3bc5abf824667c2ce532 = $(`<div id="html_dadddf90820f3bc5abf824667c2ce532" style="width: 100.0%; height: 100.0%;">Canada Top Topic: Urban lifestyle and hip-hop culture</div>`)[0];
+                popup_1add0b46b5a85b70900134cbb82308d1.setContent(html_dadddf90820f3bc5abf824667c2ce532);
+            
+        
+
+        marker_43a6840e99526f43b34428a74979d2a1.bindPopup(popup_1add0b46b5a85b70900134cbb82308d1)
+        ;
+
+        
+    
+    
+            var marker_7111d8ad4d078cb67fe2a75539b3e02c = L.marker(
+                [-31.7613365, -71.3187697],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_c61154a6fa014c54f28c22da3d5d36bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ee5bfd9b5c0a854b3ea244f24cae6ff = $(`<div id="html_0ee5bfd9b5c0a854b3ea244f24cae6ff" style="width: 100.0%; height: 100.0%;">Chile Top Topic: Emotions and relationships</div>`)[0];
+                popup_c61154a6fa014c54f28c22da3d5d36bd.setContent(html_0ee5bfd9b5c0a854b3ea244f24cae6ff);
+            
+        
+
+        marker_7111d8ad4d078cb67fe2a75539b3e02c.bindPopup(popup_c61154a6fa014c54f28c22da3d5d36bd)
+        ;
+
+        
+    
+    
+            var marker_6fb44f3067a656132a5e18ea89945036 = L.marker(
+                [4.099917, -72.9088133],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_6ecbd4fa0eb321897dbe76fd02fd964e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64a6a011932ba2294435b360b2ff86d5 = $(`<div id="html_64a6a011932ba2294435b360b2ff86d5" style="width: 100.0%; height: 100.0%;">Colombia Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_6ecbd4fa0eb321897dbe76fd02fd964e.setContent(html_64a6a011932ba2294435b360b2ff86d5);
+            
+        
+
+        marker_6fb44f3067a656132a5e18ea89945036.bindPopup(popup_6ecbd4fa0eb321897dbe76fd02fd964e)
+        ;
+
+        
+    
+    
+            var marker_c710428727f2f4661948189dbfe9d699 = L.marker(
+                [49.7439047, 15.3381061],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_c3ce63033335dfd16cdbd5f2a5e19b97 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b9cb377eaa39970f04913b22ca93086 = $(`<div id="html_7b9cb377eaa39970f04913b22ca93086" style="width: 100.0%; height: 100.0%;">Czech_republic Top Topic: Love and heartbreak, unhappy love</div>`)[0];
+                popup_c3ce63033335dfd16cdbd5f2a5e19b97.setContent(html_7b9cb377eaa39970f04913b22ca93086);
+            
+        
+
+        marker_c710428727f2f4661948189dbfe9d699.bindPopup(popup_c3ce63033335dfd16cdbd5f2a5e19b97)
+        ;
+
+        
+    
+    
+            var marker_7f6e786b5910b875f2759b8a8e63f2be = L.marker(
+                [26.2540493, 29.2675469],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_c709659b2579fff687e97952552f5651 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4534141e8a8f99b3a51493c0b2a85314 = $(`<div id="html_4534141e8a8f99b3a51493c0b2a85314" style="width: 100.0%; height: 100.0%;">Egypt Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_c709659b2579fff687e97952552f5651.setContent(html_4534141e8a8f99b3a51493c0b2a85314);
+            
+        
+
+        marker_7f6e786b5910b875f2759b8a8e63f2be.bindPopup(popup_c709659b2579fff687e97952552f5651)
+        ;
+
+        
+    
+    
+            var marker_b8d6bb66263cb0b93863c8324678dc61 = L.marker(
+                [63.2467777, 25.9209164],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_e7007ab838d2a8ae4361e56f4c5cbc14 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc1a60501c2d1f97ef364347eb526b2a = $(`<div id="html_fc1a60501c2d1f97ef364347eb526b2a" style="width: 100.0%; height: 100.0%;">Finland Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_e7007ab838d2a8ae4361e56f4c5cbc14.setContent(html_fc1a60501c2d1f97ef364347eb526b2a);
+            
+        
+
+        marker_b8d6bb66263cb0b93863c8324678dc61.bindPopup(popup_e7007ab838d2a8ae4361e56f4c5cbc14)
+        ;
+
+        
+    
+    
+            var marker_080b3010c8743de1ce976a3ffd13bfde = L.marker(
+                [46.603354, 1.8883335],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_a539beff6e819403ff8d885d68a05e94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc683705685a1873d0e0aea0fd0f10f5 = $(`<div id="html_fc683705685a1873d0e0aea0fd0f10f5" style="width: 100.0%; height: 100.0%;">France Top Topic: Emotions and relationships</div>`)[0];
+                popup_a539beff6e819403ff8d885d68a05e94.setContent(html_fc683705685a1873d0e0aea0fd0f10f5);
+            
+        
+
+        marker_080b3010c8743de1ce976a3ffd13bfde.bindPopup(popup_a539beff6e819403ff8d885d68a05e94)
+        ;
+
+        
+    
+    
+            var marker_23ac0c4def45d097913d8404f451233d = L.marker(
+                [51.1638175, 10.4478313],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_6dce0124f395a2bcac28131a2bf16cc1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d36c66c9ff5128f104231acbda7fd598 = $(`<div id="html_d36c66c9ff5128f104231acbda7fd598" style="width: 100.0%; height: 100.0%;">Germany Top Topic: Urban lifestyle and hip-hop culture</div>`)[0];
+                popup_6dce0124f395a2bcac28131a2bf16cc1.setContent(html_d36c66c9ff5128f104231acbda7fd598);
+            
+        
+
+        marker_23ac0c4def45d097913d8404f451233d.bindPopup(popup_6dce0124f395a2bcac28131a2bf16cc1)
+        ;
+
+        
+    
+    
+            var marker_744f4cffc1d3a01bd2bf79f228a05305 = L.marker(
+                [38.9953683, 21.9877132],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_d2110658adbfb0f0461b5be27c24d525 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ea75e2e670a4a8183c8ed6d392c4f59 = $(`<div id="html_7ea75e2e670a4a8183c8ed6d392c4f59" style="width: 100.0%; height: 100.0%;">Greece Top Topic: Urban lifestyle and hip-hop culture</div>`)[0];
+                popup_d2110658adbfb0f0461b5be27c24d525.setContent(html_7ea75e2e670a4a8183c8ed6d392c4f59);
+            
+        
+
+        marker_744f4cffc1d3a01bd2bf79f228a05305.bindPopup(popup_d2110658adbfb0f0461b5be27c24d525)
+        ;
+
+        
+    
+    
+            var marker_6be8bfa95b006c46d24a861bef0d8da2 = L.marker(
+                [47.1817585, 19.5060937],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_19149db0466e44777f773df8254435d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5cc916334ea3892cf137cee3ff7603b = $(`<div id="html_d5cc916334ea3892cf137cee3ff7603b" style="width: 100.0%; height: 100.0%;">Hungary Top Topic: Emotions and relationships</div>`)[0];
+                popup_19149db0466e44777f773df8254435d6.setContent(html_d5cc916334ea3892cf137cee3ff7603b);
+            
+        
+
+        marker_6be8bfa95b006c46d24a861bef0d8da2.bindPopup(popup_19149db0466e44777f773df8254435d6)
+        ;
+
+        
+    
+    
+            var marker_bca73e4d67a2d9b276f838b4c4d8d8b3 = L.marker(
+                [22.3511148, 78.6677428],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_2d921123dba0d848728fe9ec9c9604e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e73f99eba4cfdad53788502b1ff748b4 = $(`<div id="html_e73f99eba4cfdad53788502b1ff748b4" style="width: 100.0%; height: 100.0%;">India Top Topic: Emotions and relationships</div>`)[0];
+                popup_2d921123dba0d848728fe9ec9c9604e6.setContent(html_e73f99eba4cfdad53788502b1ff748b4);
+            
+        
+
+        marker_bca73e4d67a2d9b276f838b4c4d8d8b3.bindPopup(popup_2d921123dba0d848728fe9ec9c9604e6)
+        ;
+
+        
+    
+    
+            var marker_cf22068c7bb70b8e9142db0632ebf3c9 = L.marker(
+                [-2.4833826, 117.8902853],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_475f3bedba9c71f70e4b91d2cce16852 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18f0cd0ef19c5d897e9ac060527ba166 = $(`<div id="html_18f0cd0ef19c5d897e9ac060527ba166" style="width: 100.0%; height: 100.0%;">Indonesia Top Topic: Emotions and relationships</div>`)[0];
+                popup_475f3bedba9c71f70e4b91d2cce16852.setContent(html_18f0cd0ef19c5d897e9ac060527ba166);
+            
+        
+
+        marker_cf22068c7bb70b8e9142db0632ebf3c9.bindPopup(popup_475f3bedba9c71f70e4b91d2cce16852)
+        ;
+
+        
+    
+    
+            var marker_355844bde3bbb4c2912ab749c0f68151 = L.marker(
+                [30.8124247, 34.8594762],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_253436759a06cb5eddb48300245a6853 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8841f48b34b10378910189c78f783e42 = $(`<div id="html_8841f48b34b10378910189c78f783e42" style="width: 100.0%; height: 100.0%;">Israel Top Topic: Emotions and relationships</div>`)[0];
+                popup_253436759a06cb5eddb48300245a6853.setContent(html_8841f48b34b10378910189c78f783e42);
+            
+        
+
+        marker_355844bde3bbb4c2912ab749c0f68151.bindPopup(popup_253436759a06cb5eddb48300245a6853)
+        ;
+
+        
+    
+    
+            var marker_502c84950b56780d65e9c498c22290f3 = L.marker(
+                [42.6384261, 12.674297],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_780d658b2df217b48629fa3b6b188cdb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9cfa83edc35ee3fe9a16f1364e55e5db = $(`<div id="html_9cfa83edc35ee3fe9a16f1364e55e5db" style="width: 100.0%; height: 100.0%;">Italy Top Topic: Urban lifestyle and hip-hop culture</div>`)[0];
+                popup_780d658b2df217b48629fa3b6b188cdb.setContent(html_9cfa83edc35ee3fe9a16f1364e55e5db);
+            
+        
+
+        marker_502c84950b56780d65e9c498c22290f3.bindPopup(popup_780d658b2df217b48629fa3b6b188cdb)
+        ;
+
+        
+    
+    
+            var marker_792e3ee7e01a08f6f22fd7ba94181840 = L.marker(
+                [48.1012954, 66.7780818],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_a853797b3f4d3a5a45032d6e5859774c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_736cd48dcf1df12a10c39620f819f29e = $(`<div id="html_736cd48dcf1df12a10c39620f819f29e" style="width: 100.0%; height: 100.0%;">Kazakhstan Top Topic: Emotions and relationships</div>`)[0];
+                popup_a853797b3f4d3a5a45032d6e5859774c.setContent(html_736cd48dcf1df12a10c39620f819f29e);
+            
+        
+
+        marker_792e3ee7e01a08f6f22fd7ba94181840.bindPopup(popup_a853797b3f4d3a5a45032d6e5859774c)
+        ;
+
+        
+    
+    
+            var marker_48b4f9c43ef8dc79523fd4e291bf9345 = L.marker(
+                [4.5693754, 102.2656823],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_6b088553b3b475fe12d4e72d67d845c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2605aed5d9a5f4f483fa3483e6db11bd = $(`<div id="html_2605aed5d9a5f4f483fa3483e6db11bd" style="width: 100.0%; height: 100.0%;">Malaysia Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_6b088553b3b475fe12d4e72d67d845c6.setContent(html_2605aed5d9a5f4f483fa3483e6db11bd);
+            
+        
+
+        marker_48b4f9c43ef8dc79523fd4e291bf9345.bindPopup(popup_6b088553b3b475fe12d4e72d67d845c6)
+        ;
+
+        
+    
+    
+            var marker_e06b63db98239f6fe22690d4b4bedfa5 = L.marker(
+                [23.6585116, -102.0077097],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_87eb24423a3ed20407df3e82a24dbc8d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1787701663e0ee7503da06a7bba9adcb = $(`<div id="html_1787701663e0ee7503da06a7bba9adcb" style="width: 100.0%; height: 100.0%;">Mexico Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_87eb24423a3ed20407df3e82a24dbc8d.setContent(html_1787701663e0ee7503da06a7bba9adcb);
+            
+        
+
+        marker_e06b63db98239f6fe22690d4b4bedfa5.bindPopup(popup_87eb24423a3ed20407df3e82a24dbc8d)
+        ;
+
+        
+    
+    
+            var marker_1b22948e55e9f09398e24b38414bb989 = L.marker(
+                [31.1728205, -7.3362482],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_e7aef7cd67ef04b03f90534f50898ce9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23a21b132d2bacd6a7df87d847b2b5d5 = $(`<div id="html_23a21b132d2bacd6a7df87d847b2b5d5" style="width: 100.0%; height: 100.0%;">Morocco Top Topic: Untranslated</div>`)[0];
+                popup_e7aef7cd67ef04b03f90534f50898ce9.setContent(html_23a21b132d2bacd6a7df87d847b2b5d5);
+            
+        
+
+        marker_1b22948e55e9f09398e24b38414bb989.bindPopup(popup_e7aef7cd67ef04b03f90534f50898ce9)
+        ;
+
+        
+    
+    
+            var marker_10d594d32e950f9b05a1e44b530c863d = L.marker(
+                [61.1529386, 8.7876653],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_4185961d8580a78965b5d7d04ea00c82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f613c1758cc18d8ff04712f1d212c68 = $(`<div id="html_9f613c1758cc18d8ff04712f1d212c68" style="width: 100.0%; height: 100.0%;">Norway Top Topic: Emotions and relationships</div>`)[0];
+                popup_4185961d8580a78965b5d7d04ea00c82.setContent(html_9f613c1758cc18d8ff04712f1d212c68);
+            
+        
+
+        marker_10d594d32e950f9b05a1e44b530c863d.bindPopup(popup_4185961d8580a78965b5d7d04ea00c82)
+        ;
+
+        
+    
+    
+            var marker_b6d2c6d5c335173be738308ede456557 = L.marker(
+                [30.3308401, 71.247499],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_5de1cd0e81c756b980a9f265135aa572 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9b61787442accc10a1ccbd81b13f248 = $(`<div id="html_b9b61787442accc10a1ccbd81b13f248" style="width: 100.0%; height: 100.0%;">Pakistan Top Topic: Untranslated</div>`)[0];
+                popup_5de1cd0e81c756b980a9f265135aa572.setContent(html_b9b61787442accc10a1ccbd81b13f248);
+            
+        
+
+        marker_b6d2c6d5c335173be738308ede456557.bindPopup(popup_5de1cd0e81c756b980a9f265135aa572)
+        ;
+
+        
+    
+    
+            var marker_ad56becf78ff2d4f406b88f9a723dfcb = L.marker(
+                [12.7503486, 122.7312101],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_617a3cf7381353051edc0bd2fa3ffcf5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc2ebcbf3815de9f7a09ed22cfb6e428 = $(`<div id="html_bc2ebcbf3815de9f7a09ed22cfb6e428" style="width: 100.0%; height: 100.0%;">Philippines Top Topic: Emotions and relationships</div>`)[0];
+                popup_617a3cf7381353051edc0bd2fa3ffcf5.setContent(html_bc2ebcbf3815de9f7a09ed22cfb6e428);
+            
+        
+
+        marker_ad56becf78ff2d4f406b88f9a723dfcb.bindPopup(popup_617a3cf7381353051edc0bd2fa3ffcf5)
+        ;
+
+        
+    
+    
+            var marker_737bf9a4a35456d886ed5840a30ca2b4 = L.marker(
+                [52.215933, 19.134422],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_c7aaed91b63560a9c2c14ed004125c56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_41dcf6cee295de97c95292d1c23fb7dd = $(`<div id="html_41dcf6cee295de97c95292d1c23fb7dd" style="width: 100.0%; height: 100.0%;">Poland Top Topic: Emotions and relationships</div>`)[0];
+                popup_c7aaed91b63560a9c2c14ed004125c56.setContent(html_41dcf6cee295de97c95292d1c23fb7dd);
+            
+        
+
+        marker_737bf9a4a35456d886ed5840a30ca2b4.bindPopup(popup_c7aaed91b63560a9c2c14ed004125c56)
+        ;
+
+        
+    
+    
+            var marker_8fa26564134f555c4a32e5fcb8474512 = L.marker(
+                [64.6863136, 97.7453061],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_43092be7b2197978d1fcf4c32ae0fa6c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c18972ae9260c23e7d3834c1bceb173 = $(`<div id="html_9c18972ae9260c23e7d3834c1bceb173" style="width: 100.0%; height: 100.0%;">Russia Top Topic: Urban lifestyle and hip-hop culture</div>`)[0];
+                popup_43092be7b2197978d1fcf4c32ae0fa6c.setContent(html_9c18972ae9260c23e7d3834c1bceb173);
+            
+        
+
+        marker_8fa26564134f555c4a32e5fcb8474512.bindPopup(popup_43092be7b2197978d1fcf4c32ae0fa6c)
+        ;
+
+        
+    
+    
+            var marker_24bd85c35177a4b96e7d9bf923e4febc = L.marker(
+                [25.6242618, 42.3528328],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_9cf37168f11860a7e8f219ee258be41a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea15b310aa7bcd6428a20f799130a440 = $(`<div id="html_ea15b310aa7bcd6428a20f799130a440" style="width: 100.0%; height: 100.0%;">Saudi_arabia Top Topic: Emotions and relationships</div>`)[0];
+                popup_9cf37168f11860a7e8f219ee258be41a.setContent(html_ea15b310aa7bcd6428a20f799130a440);
+            
+        
+
+        marker_24bd85c35177a4b96e7d9bf923e4febc.bindPopup(popup_9cf37168f11860a7e8f219ee258be41a)
+        ;
+
+        
+    
+    
+            var marker_a5c087fb53fbec44c0d370f4061e263d = L.marker(
+                [-28.8166236, 24.991639],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_0c1f5e8a408b5b821cab0b33c22b81a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2b604bf4fa3f31aeb287a8491b28eb42 = $(`<div id="html_2b604bf4fa3f31aeb287a8491b28eb42" style="width: 100.0%; height: 100.0%;">South_africa Top Topic: Emotions and relationships</div>`)[0];
+                popup_0c1f5e8a408b5b821cab0b33c22b81a6.setContent(html_2b604bf4fa3f31aeb287a8491b28eb42);
+            
+        
+
+        marker_a5c087fb53fbec44c0d370f4061e263d.bindPopup(popup_0c1f5e8a408b5b821cab0b33c22b81a6)
+        ;
+
+        
+    
+    
+            var marker_01af46a63e43e4341041ecd46e922e8a = L.marker(
+                [39.3260685, -4.8379791],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_0a8a97238abcdb10e109df1225053e73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_627e524ed888a2e69b5acd9efadcd31a = $(`<div id="html_627e524ed888a2e69b5acd9efadcd31a" style="width: 100.0%; height: 100.0%;">Spain Top Topic: Sensual, bodily love</div>`)[0];
+                popup_0a8a97238abcdb10e109df1225053e73.setContent(html_627e524ed888a2e69b5acd9efadcd31a);
+            
+        
+
+        marker_01af46a63e43e4341041ecd46e922e8a.bindPopup(popup_0a8a97238abcdb10e109df1225053e73)
+        ;
+
+        
+    
+    
+            var marker_e4d2de6cf1bab16e901f91b08fa327e8 = L.marker(
+                [59.6749712, 14.5208584],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_e9466e9ae70d0af246d972c40a2dcf28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e53661f7a4c9860a524ab44e0cfd5fd = $(`<div id="html_1e53661f7a4c9860a524ab44e0cfd5fd" style="width: 100.0%; height: 100.0%;">Sweden Top Topic: Emotions and relationships</div>`)[0];
+                popup_e9466e9ae70d0af246d972c40a2dcf28.setContent(html_1e53661f7a4c9860a524ab44e0cfd5fd);
+            
+        
+
+        marker_e4d2de6cf1bab16e901f91b08fa327e8.bindPopup(popup_e9466e9ae70d0af246d972c40a2dcf28)
+        ;
+
+        
+    
+    
+            var marker_9a6d1a21b9a2eb76193d9c198c3477b1 = L.marker(
+                [14.8971921, 100.83273],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_57783266f1765ac66c751276baf6c4db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7100c19c4da26097c09196a31c3fd22c = $(`<div id="html_7100c19c4da26097c09196a31c3fd22c" style="width: 100.0%; height: 100.0%;">Thailand Top Topic: Emotions and relationships</div>`)[0];
+                popup_57783266f1765ac66c751276baf6c4db.setContent(html_7100c19c4da26097c09196a31c3fd22c);
+            
+        
+
+        marker_9a6d1a21b9a2eb76193d9c198c3477b1.bindPopup(popup_57783266f1765ac66c751276baf6c4db)
+        ;
+
+        
+    
+    
+            var marker_86cf59555a23f4be8f65dc83be399a88 = L.marker(
+                [38.9597594, 34.9249653],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_a41efafa21802df846b9e17eafa62608 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b1175ef808de83bac0b97ef417dab57 = $(`<div id="html_9b1175ef808de83bac0b97ef417dab57" style="width: 100.0%; height: 100.0%;">Turkey Top Topic: Emotions and relationships</div>`)[0];
+                popup_a41efafa21802df846b9e17eafa62608.setContent(html_9b1175ef808de83bac0b97ef417dab57);
+            
+        
+
+        marker_86cf59555a23f4be8f65dc83be399a88.bindPopup(popup_a41efafa21802df846b9e17eafa62608)
+        ;
+
+        
+    
+    
+            var marker_74d8f4a7ddbd810cb764fa9ecd42a7cc = L.marker(
+                [54.7023545, -3.2765753],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_34c8d9ce823b273075764f0f0f5560cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48c74786660c595d72a1915ab85cd3be = $(`<div id="html_48c74786660c595d72a1915ab85cd3be" style="width: 100.0%; height: 100.0%;">Uk Top Topic: Emotions and relationships</div>`)[0];
+                popup_34c8d9ce823b273075764f0f0f5560cb.setContent(html_48c74786660c595d72a1915ab85cd3be);
+            
+        
+
+        marker_74d8f4a7ddbd810cb764fa9ecd42a7cc.bindPopup(popup_34c8d9ce823b273075764f0f0f5560cb)
+        ;
+
+        
+    
+    
+            var marker_635a17fd2d88c9218c5ebce5519df028 = L.marker(
+                [49.4871968, 31.2718321],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_6edb71ba2e4b5343308dfaf16d099253 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5aebf0986e4b70e7f2c0754635c6185 = $(`<div id="html_c5aebf0986e4b70e7f2c0754635c6185" style="width: 100.0%; height: 100.0%;">Ukraine Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_6edb71ba2e4b5343308dfaf16d099253.setContent(html_c5aebf0986e4b70e7f2c0754635c6185);
+            
+        
+
+        marker_635a17fd2d88c9218c5ebce5519df028.bindPopup(popup_6edb71ba2e4b5343308dfaf16d099253)
+        ;
+
+        
+    
+    
+            var marker_a63a7bed65448bba7a93e0a6471284e2 = L.marker(
+                [39.7837304, -100.445882],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_6d323e36bc6be02d4ec8af0744032826 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_afb7c20ca9bbc2655dc6abeb1f7fa66c = $(`<div id="html_afb7c20ca9bbc2655dc6abeb1f7fa66c" style="width: 100.0%; height: 100.0%;">Usa Top Topic: Emotions and relationships</div>`)[0];
+                popup_6d323e36bc6be02d4ec8af0744032826.setContent(html_afb7c20ca9bbc2655dc6abeb1f7fa66c);
+            
+        
+
+        marker_a63a7bed65448bba7a93e0a6471284e2.bindPopup(popup_6d323e36bc6be02d4ec8af0744032826)
+        ;
+
+        
+    
+    
+            var marker_e689addad73fbdb96e6ce4e09bd4af0e = L.marker(
+                [15.9266657, 107.9650855],
+                {}
+            ).addTo(marker_cluster_48402a850922a1ba2758881a79165782);
+        
+    
+        var popup_116836df2f572c46c515f3cba349e1b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2d8239d500d3b512309cc7b32bd93f3 = $(`<div id="html_f2d8239d500d3b512309cc7b32bd93f3" style="width: 100.0%; height: 100.0%;">Vietnam Top Topic: Feelings, existential themes, personal reflection</div>`)[0];
+                popup_116836df2f572c46c515f3cba349e1b0.setContent(html_f2d8239d500d3b512309cc7b32bd93f3);
+            
+        
+
+        marker_e689addad73fbdb96e6ce4e09bd4af0e.bindPopup(popup_116836df2f572c46c515f3cba349e1b0)
+        ;
+
+        
+    
+</script>
+</html>
