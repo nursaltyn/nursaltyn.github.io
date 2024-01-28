@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #7E5BCC; /* Calm shade of violet */
+            color: white;
+            border-radius: 10px;
+        }
+
+        nav {
+            display: grid;
+            max-width: 1000px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-content: center;
+            margin: 20px auto; /* Center the entire nav */
+            margin-top: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #7E5BCC; /* Calm shade of violet */
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #7E5BCC; /* Calm shade of violet */
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 style="font-size: 2.5em;">🌍 Explore Countries</h1>
+        <p style="font-style: italic;">Click on a country to learn more!</p>
+    </header>
+
+    <section>
+        <h2 style="color: #7E5BCC;">🌐 Welcome to the Countries Page</h2>
+        <p>Explore information about different countries by clicking on the links above.</p>
+        <p></p>
+
+        <nav>
+            <a href="country_page.html?country=usa">USA</a>
+            <a href="country_page.html?country=uk">UK</a>
+            <a href="country_page.html?country=canada">Canada</a>
+            <a href="country_page.html?country=australia">Australia</a>
+            <a href="country_page.html?country=france">France</a>
+            <a href="country_page.html?country=germany">Germany</a>
+            <a href="country_page.html?country=japan">Japan</a>
+            <a href="country_page.html?country=brazil">Brazil</a>
+            <a href="country_page.html?country=russia">Russia</a>
+            <a href="country_page.html?country=south_korea">South Korea</a>
+            <a href="country_page.html?country=spain">Spain</a>
+            <a href="country_page.html?country=italy">Italy</a>
+            <a href="country_page.html?country=mexico">Mexico</a>
+            <a href="country_page.html?country=south_africa">South Africa</a>
+            <a href="country_page.html?country=nigeria">Nigeria</a>
+            <a href="country_page.html?country=argentina">Argentina</a>
+            <a href="country_page.html?country=saudi_arabia">Saudi Arabia</a>
+            <!-- Repeat until you have a total of 40 countries -->
+        </nav>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Your Countries Project. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
