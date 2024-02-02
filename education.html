@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Education</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external stylesheet, adjust the path accordingly -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #8d5e58;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #8d5e58;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a::before {
+            content: '\2022';
+            color: #adb5bd;
+            margin-right: 10px;
+        }
+
+        nav a:hover {
+            color: #adb5bd;
+        }
+
+        .education-section {
+            padding: 20px;
+            width: 60%; /* Adjust the width of the education section */
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+            border-radius: 10px; /* Rounded corners */
+            margin: 20px auto; /* Center the section on the page */
+            text-align: center;
+            position: relative;
+            flex-grow: 1; 
+        }
+
+        .education-container {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .education-container h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition: font-size 0.3s; /* Add transition for size change on hover */
+        }
+
+        .education-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .timeline {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%); /* Center the timeline vertically */
+            width: 2px;
+            background-color: #343a40; /* Timeline color */
+            height: 100%; /* Adjust the height of the timeline */
+            margin-left: 10px; /* Adjust the spacing between the timeline and container */
+        }
+
+        .image-container {
+            position: absolute;
+            top: 50%;
+            left: -70px; /* Adjust the position of the image */
+            transform: translateY(-50%); /* Center the image vertically */
+            width: 100px; /* Adjust the width of the image container */
+            text-align: center;
+            transition: left 0.3s; /* Add transition for position change on hover */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 50%; /* Make the image round */
+        }
+
+        .education-container:hover {
+            cursor: pointer;
+        }
+
+        .education-container:hover h2 {
+            font-size: 24px; /* Increase font size on hover */
+        }
+
+        .education-container:hover .image-container {
+            left: -40px; /* Adjust the position on hover */
+        }
+
+        footer {
+            background-color: #8d5e58;  /* 343a40 old color */
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: auto;
+        } 
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#about">About me</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <!-- Add more links for additional pages -->
+    </nav>
+
+    <section class="education-section" id="education">
+        <div class="education-container">
+            <div class="timeline"></div>
+            <div class="image-container">
+                <img src="photo.jpg" alt="University 1 Logo">
+            </div>
+            <h2>University Name 1</h2>
+            <p>Location: City, Country</p>
+            <p>Timeline: Start Year - End Year</p>
+            <p>Coursework: Relevant courses you took</p>
+            <p>GPA: Your GPA</p>
+        </div>
+
+        <div class="education-container">
+            <div class="timeline"></div>
+            <div class="image-container">
+                <img src="photo.jpg" alt="University 2 Logo">
+            </div>
+            <h2>University Name 2</h2>
+            <p>Location: City, Country</p>
+            <p>Timeline: Start Year - End Year</p>
+            <p>Coursework: Relevant courses you took</p>
+            <p>GPA: Your GPA</p>
+        </div>
+
+        <!-- Add more education containers as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Add smooth scrolling to anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>

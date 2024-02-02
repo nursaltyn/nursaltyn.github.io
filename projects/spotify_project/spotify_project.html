@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my website :)</title>
+    <style>
+        /* Your existing CSS styles */
+
+
+        body {
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px; /* Adjust the value to control the corner roundness */
+            box-shadow: 0 4px 8px rgba(234, 190, 251, 0.1);
+        }
+
+        .collapsible {
+            cursor: pointer;
+            padding: 5px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+
+        .active, .collapsible:hover {
+            background-color: #72e16a;
+            color: white;
+        }
+
+        .content {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .content img {
+            display: block;
+            margin: auto;
+            max-width: 100%; /* Ensure the image doesn't exceed its original size */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 style="font-size: 2.5em;">🎶 Most popular song topics around the world 🌍</h1>
+        <p style="font-style: italic;">Discover the diverse themes that resonate globally.</p>
+    </header>
+
+    <nav>
+        <a href="map_top_languages.html">Most popular languages</a>
+        <a href="map_top_topics.html">Most popular topics</a>
+        <a href="countries.html">Explore topics in each country</a>
+        <!-- Add more links for additional pages -->
+    </nav>
+
+    <section>
+        <h2 style="color: #4CAF50;">🎵 About the project</h2>
+        <p>While going through a break-up, I tried to distract myself with music - just like most of us do. 
+            However, I quickly realised that songs weren't of much help: almost all of them were cherishing love and romantic feelings.</p>
+        <p>I started wondering: <b>is love indeed the most common topic in all countries and languages?</b> And can it be so that in different countries, 
+            different topics are preferred? One could blindly assume the topic of money to be popular in the US, and the topic of politics, for example, in Russia.</p>
+        <p>And since I had to choose a project for my Computational Linguisitcs class, I decided to explore this idea.</p>
+    </section>
+
+    <section>
+        <button class="collapsible"><h3 style="color: #7E5BCC;">&#128218 Methodology</h3></button>
+        <div class="content">
+            <p>I took top-200 songs popular in each of the 38 countries. To select the songs, I used Spotify's weekly total charts and selected 
+                the most popular songs of all times* for that country.</p>
+                
+            <p>Then I scraped the lyrics, translated them to English and preprocessed 
+                using basic techniques (tokenization, lemmatization, lowercasing, deleting punctuation and stop-words**). 
+                Then I applied topic modeling using LDA (Latent Dirichlet Allocation) to get the topics for each country. </p> 
+                    
+                
+            <p>Tools utilized:</p>
+
+                <ul>
+                    <li>Genius API - to scrape the lyrics of the songs;</li>
+                    <li>Google API - to translate the lyrics to English;</li>
+                    <li>Gensim library - for topic modeling;</li>
+                    <li>pyLDAvis library - to visualize the results;</li>
+                    <li>Kworb.net - for the names of the songs</li>
+                    <!-- Add more list items as needed -->
+                </ul>
+
+            <p>*from the moment Spotify entered the country till March 2023</p>
+            <p>**I also used <b>filter_extremes</b> function from <b>gensim</b> module to eliminate the most common words 
+                (that are met in more than 50% of the documents) and the least common, rather eccentric/too specific 
+                words (that are met in less than 3 documents) – for example, names of the entities, rare words 
+                (like “pathointelligence” or “bermuda triangle”), etc. The function also takes only the top N words from the remaining corpus 
+                (in my case, N was set to 15 000).
+            </p></p>
+    
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible"><h3 style="color: #7E5BCC;">&#128208 Evaluation (with a bit of math)</h3></button>
+        <div class="content">
+            <p>After applying topic modeling, I ended up with various clusters of words per country.</p>
+
+            <p>Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of the cluster: instead, we have to label them ourselves.
+                In fact, we can't even know for sure which number of topics there actually are! LDA just gives us back the exact number of clusters that we ask it to produce. 
+                So, for each country, I tried to produce from 3 to 7 topics, just to see how it goes.</p>
+        
+                <p>Good news is that there are some metrics that help us evaluate the quality of clusters. I used <a href="https://www.baeldung.com/cs/topic-modeling-coherence-score">UMass Coherence Score:</a></p>
+        
+                <img src="umass.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
+        
+                <p>UMass Coherence score reflects how often words occur together within a topic. 
+                    To calculate it, we take the logarithm of the number of times two words appeared together across the documents 
+                    and divide it by the number of times the word appeared alone. So the greater the number, the better is the coherence score. 
+                    
+                <p>The best u_mass score will be as close to 0 as possible (since the logarithm of 1 is 0).</p> 
+                <img src="umass_2.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
+        
+                <p>To measure the coherence of the whole topic (cluster), we extend the calculation to each pair of top-N words and calculate 
+                    average pairwise coherence score.</p> 
+        </div>
+    </section>
+
+            <section>
+                <button class="collapsible"><h3 style="color: #7E5BCC;">&#128172 Results</h3></button>
+                <div class="content">
+                    <p> 
+                        
+                        Naming the topics was one of the hardest parts! 
+
+                        After looking through all the countries, I distinguished the following most common topics: 
+                        
+                        <li>Love-related emotions/Relationships (who could have guessed?)</li>
+                        <li>Urban Life/ Hip-Hop culture/ Gangsta life</li>
+                        <li>Self-reflection, abstract topics</li>
+                        <li>Different types of love: romantic/ heartbreak/ sensual</li>
+                        
+                        <p>Sometimes clusters were formed of noise and artifacts:</p>
+
+                        <li>Music and artist names</li>
+                        <li>Untranslated words (for low-resource languages)</li>
+                    
+                      <p>To my disappointment, I didn't find very specific topics, like "food", "family", or something even more unexpected. 
+                        Well, maybe, the topics weren't that diverse to begin with? Maybe the most popular songs usually 
+                        cherish similar topics and don’t mention anything too eccentric?</p>
+    
+                    <p>However, there were singular cases that diverged from the common topics. I would name them:</p>
+                    
+                    <li>Politics and religion</li>
+                    <li>Violence and conflict</li>
+
+                    </p>
+                </div>
+            </section>
+
+
+    <footer>
+        <p>&copy; 2024 nursaltyn. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
