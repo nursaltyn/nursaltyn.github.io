@@ -316,6 +316,116 @@
             left: -250px; /* Adjust the position on hover */
         }
 
+        .publications-section {
+            padding: 20px;
+            width: 100%;
+            max-width: 900px; /* Adjust the maximum width as needed */
+            margin: 0 auto; /* Center the container */
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+
+        .publication-container {
+            margin-bottom: 30px;
+            text-align: left;
+            /* border: 2px solid #8d5e58; */
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .publication-container:hover {
+                transform: scale(1.05);
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+
+        .publication-container h3 a {
+            text-decoration: none;
+            color: #343a40;
+            transition: color 0.3s;
+        }
+
+        .publication-container h3 a:hover {
+            color: #adb5bd;
+        }
+
+
+        .publication-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .publication-container:not(:last-child) {
+            border-bottom: 2px solid #e7cdc8;
+        }
+
+        .blog-section {
+        max-width: 900px; /* Adjust the maximum width as needed */
+        margin: 0 auto; /* Center the container */
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        margin-top: 20px;
+        text-align: center;
+        }
+
+        .blog-post {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Add transitions for smooth effects */
+            border-radius: 10px; /* Rounded corners for the container */
+        }
+
+        .blog-post img {
+            max-width: 200px;
+            border-radius: 8px; /* Rounded corners for the image */
+            margin-right: 20px;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.05); /* Increase size on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+        }
+
+        .blog-post:hover img {
+            filter: brightness(1.2); /* Lighten up on hover */
+        }
+        .blog-post:hover img {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        .blog-content {
+            flex-grow: 1; /* Allow the content to grow and take available space */
+        }
+
+        .blog-content h3 a {
+            text-decoration: none;
+            color: #343a40;
+            transition: color 0.3s;
+        }
+
+        .blog-content h3 a:hover {
+            color: #adb5bd;
+        }
+
+        .blog-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+ 
 
         footer {
             background-color: #8d5e58;  /* 343a40 old color */
@@ -341,7 +451,7 @@
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="#activities">Activities</a>
-        <a href="blog">Blog</a>
+        <a href="#blog">Blog</a>
         <!-- Add more links for additional pages -->
     </nav>
 
@@ -499,6 +609,47 @@
         </section>
 
     </div>
+
+    <div class="publications-section" id="publications">
+        <h2>Publications</h2>
+    
+        <div class="publication-container">
+            <h3><a href="#" target="_blank">Paper Title 1</a></h3>
+            <p>Short description of Paper Title 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    
+        <div class="publication-container">
+            <h3><a href="#" target="_blank">Paper Title 2</a></h3>
+            <p>Short description of Paper Title 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    
+        <!-- Add more publication containers as needed -->
+    
+    </div>
+
+    <div class="blog-section" id="blog">
+        <h2>Blog</h2>
+    
+        <div class="blog-post">
+            <img src="blog_post_1.jpg" alt="Blog Post 1 Image">
+            <div class="blog-content">
+                <h3><a href="#" target="_blank">Article Title 1</a></h3>
+                <p>Short description of Article Title 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    
+        <div class="blog-post">
+            <img src="blog_post_2.jpg" alt="Blog Post 2 Image">
+            <div class="blog-content">
+                <h3><a href="#" target="_blank">Article Title 2</a></h3>
+                <p>Short description of Article Title 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    
+        <!-- Add more blog posts as needed -->
+    
+    </div>
+    
 
     <footer>
         <p>&copy; 2024 nursaltyn. All rights reserved.</p>
