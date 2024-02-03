@@ -84,6 +84,24 @@
             max-width: 100%; /* Ensure the image doesn't exceed its original size */
         }
 
+        ul {
+        list-style-type: none; /* Remove default list style */
+        padding: 0; /* Remove default padding */
+        }
+
+        li {
+        margin-bottom: 8px; /* Optional: Add some spacing between list items */
+        }
+
+        li::before {
+        content: "\2022"; /* Unicode character for filled circle */
+        color: #ff0000; /* Optional: Change the color of the filled circle */
+        font-size: 1.5em; /* Optional: Adjust the size of the filled circle */
+        display: inline-block;
+        width: 1em; /* Optional: Adjust the width of the filled circle */
+        margin-right: 0.5em; /* Optional: Add some spacing between the filled circle and the text */
+        }
+
         footer {
             text-align: center;
             margin-top: 20px;
@@ -113,8 +131,14 @@
         <h2 style="color: #4CAF50;">🎵 About the project</h2>
         <p>While going through a break-up, I tried to distract myself with music - just like most of us do. 
             However, I quickly realised that songs weren't of much help: almost all of them were cherishing love and romantic feelings.</p>
-        <p>I started wondering: <b>is love indeed the most common topic in all countries and languages?</b> And can it be so that in different countries, 
-            different topics are preferred? One could blindly assume the topic of money to be popular in the US, and the topic of politics, for example, in Russia.</p>
+        <p>I started wondering: 
+            <ul>
+                <li>Is love indeed the most common topic in all countries and languages?</li>
+                <li>Can it be so that in different countries, 
+                    different topics are preferred? One could blindly assume the topic of money to 
+                    be popular in the US, and the topic of politics, for example, in Russia.</li>
+                <li>What languages of songs are popular in different countries?</li>
+              </ul></p>
         <p>And since I had to choose a project for my Computational Linguisitcs class, I decided to explore this idea.</p>
     </section>
 

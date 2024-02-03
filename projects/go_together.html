@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my website :)</title>
+    <style>
+        /* Your existing CSS styles */
+
+
+        body {
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #f2b957;
+            color: white;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #f2b957;
+        }
+
+
+        section {
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px; /* Adjust the value to control the corner roundness */
+            box-shadow: 0 4px 8px rgba(234, 190, 251, 0.1);
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            padding: 5px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+
+        .active, .collapsible:hover {
+            background-color: #f2b957;
+            color: white;
+        }
+
+        .content {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .content img {
+            display: block;
+            margin: auto;
+            max-width: 100%; /* Ensure the image doesn't exceed its original size */
+        }
+
+        ul {
+        list-style-type: none; /* Remove default list style */
+        padding: 0; /* Remove default padding */
+        }
+
+        li {
+        margin-bottom: 8px; /* Optional: Add some spacing between list items */
+        }
+
+        li::before {
+        content: "\2022"; /* Unicode character for filled circle */
+        color: #ff0000; /* Optional: Change the color of the filled circle */
+        font-size: 1.5em; /* Optional: Adjust the size of the filled circle */
+        display: inline-block;
+        width: 1em; /* Optional: Adjust the width of the filled circle */
+        margin-right: 0.5em; /* Optional: Add some spacing between the filled circle and the text */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f2b957;
+            color: white;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 style="font-size: 2.5em;">🚶‍♀️ GoTogether! 🚶‍♂️</h1>
+        <p style="font-style: italic;">Elevate your shared experiences in the city and beyond.</p>
+    </header>
+
+    <nav>
+        <a href="https://huggingface.co/spaces/GoTogether/App_Prototype">Try the app!</a>
+        <!-- Add more links for additional pages -->
+    </nav>
+
+    <section>
+        <h2 style="color: #f2b957;">🗺️ About the project</h2>
+        <p>You decided to go out with a friend, or, if you are sociable enough, a group of friends. 
+            Now comes the question: <b>where should 
+                we actually go?</b>
+
+
+        <p>You could always opt for the same place you always went to. But say, you want to explore something different, or you are new in the city. That's where the problems start.</p> 
+        
+        <p>One of your friends is vegan, but another one is craving for a juicy steak. One of your friend lives far away, another has gluten intolerance; 
+            some want to sit in a cozy quiet place, and some want it loud and upbeat... 
+            How should you find a compromise?</p>
+            
+            
+        <p><b>Our solution is GoTogether: an app that recommends 2 and more users a place to go based on each and everyone's preferences. 
+            It optimizes the recommended 
+            place in such a way that everyone can find something for themselves without spending time on debates and arguments.</b>
+        </p>
+
+        <p>Currently, it is available as a prototype on HuggingFace, and helps 2 users choose a restaurant. The database of restaurants 
+            is taken from <a href="https://datarepo.eng.ucsd.edu/mcauley_group/gdrive/googlelocal/">Google Review Dataset</a> for Vermont, USA.
+        </p>
+
+        <!-- <p>I started wondering: 
+            <ul>
+                <li>Is love indeed the most common topic in all countries and languages?</li>
+                <li>Can it be so that in different countries, 
+                    different topics are preferred? One could blindly assume the topic of money to 
+                    be popular in the US, and the topic of politics, for example, in Russia.</li>
+                <li>What languages of songs are popular in different countries?</li>
+              </ul></p> -->
+    </section>
+
+
+    <section>
+        <h2 style="color: #f2b957;">🏞️ Why GoTogether?</h2>
+            <ul>
+                <li>The app distinguishes not only between types of food, but also between types of occasion. You'll receive
+                    different suggestions if you are going on a date than if you are having a business-meeting
+                </li>
+                <li>You don't have to stick to default catgories: our smart system can understand even if you write: 
+                    "I want something spicy in a chill place not far from the center"
+                </li>
+                <li>In the next update, are planning to add not only restaurants, but other activities as well: museums and theaters, 
+                    nature spots, sports and kraft workshops, and so on.</li>
+                <li>You get a discount on your order if you go to a restaurant or other place via our app!</li>
+              </ul></p>
+    </section>
+
+
+
+    <footer>
+        <p>&copy; 2024 nursaltyn. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
