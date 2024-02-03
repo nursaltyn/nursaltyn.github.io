@@ -173,7 +173,7 @@
 
     <nav>
         <a href="#Results">Results</a>
-        <a href="map_top_topics.html">Visualizations</a>
+        <a href="#visualizations">Visualizations</a>
         <a href="https://huggingface.co/spaces/NursNurs/detect_mental_disorder">Diagnose your character</a>
         <!-- Add more links for additional pages -->
     </nav>
@@ -185,7 +185,7 @@
 
             <ul>
                 <li><a href="#Results"><b>Check out our overal statistics by countries and authors</b></a></li>
-                <li>Explore each country and character with the 3D PCA visualization</li>
+                <li><a href="#visualizations"><b>Explore each country and character with the 3D PCA visualization</b></a></li>
                 <li>Try out our <a href="https://huggingface.co/spaces/NursNurs/detect_mental_disorder">mini-app</a> where you can diagnose any other literary character or even yourself based on provided description (please note this
                      can't be used for diagnostics and can be used for entertainment only).
                 </li>
@@ -227,96 +227,148 @@
         </div>
     </section>
 
+
     <section>
         <button class="collapsible"><h3 style="color: #223388;">&#128218 Methodology</h3></button>
         <div class="content">
-            <p>I took top-200 songs popular in each of the 38 countries. To select the songs, I used Spotify's weekly total charts and selected 
-                the most popular songs of all times* for that country.</p>
+            <p> 
+            </p>
+            
+            <p>There are many questions one can pose: 
+                <ul>
+                    <li><b>Do depicted disorders differ by time period/country/author?</b></li>
+                    <li><b>Do popularly described disorders correlate with historical events/context?</b> For example, can it be that after wars,
+                     more literary characters were described with PTSD, and after famine more characters had eating disorders?</li>
+                    <li><b>Do male and female characters differ in what disorders are assigned to them?</b> For example, could female characters
+                     be more often associated with depression and histeria, while male characters - with schizophrenia and asocial disorders?</li>
+                  </ul></p>
+                  <p>This work is an attempt to address some of these questions using computational approach.</p>
+    
+        </div>
+    </section>
+
+    <!-- <img src="umass.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;"> -->
+
+    <section id="visualizations">
+        
+        <button class="collapsible"><h3 style="color: #223388;">&#128218 Visualizations</h3></button>
+        <div class="content">
              
             <!-- Collapsible menu for countries -->
             <button class="collapsible">Germany</button>
             <div class="content">
-                <p>Country 1 content goes here...</p>
+                Explore literary characters of:
+                <button class="collapsible">• Johann Goethe</button>
+                <div class="content">
+                    <div class="plot-character">
+                    <iframe src="Germany/jw_goethe_plot.html" class="center-iframe"></iframe>
+                </div>
+            </div>
+                        
+            <button class="collapsible">• E.T.A. Hoffman</button>
+                <div class="content">
+                    <div class="plot-character">
+                    <iframe src="Germany/eta_hoffmann_plot.html" class="center-iframe"></iframe>
+                </div> 
+            </div>
+                             
+            <button class="collapsible">• Theodor Fontane</button>
+            <div class="content">
+                <div class="plot-character">
+                    <iframe src="Germany/theodor_fontane_plot.html" class="center-iframe"></iframe>
+                </div>  
+            </div>
             </div>
 
             <button class="collapsible">France</button>
             <div class="content">
-                <p>Country 1 content goes here...</p>
+                Explore literary characters of:
+                
+                <button class="collapsible">• Victor Hugo</button>
+                <div class="content">
+                    <div class="plot-character">
+                    <iframe src="France/hugo_plot.html" class="center-iframe"></iframe>
+                </div>
+            </div>
+                        
+            <button class="collapsible">• George Sand</button>
+                <div class="content">
+                    <div class="plot-character">
+                    <iframe src="France/sand_plot.html" class="center-iframe"></iframe>
+                </div> 
+            </div>
+                             
+            <button class="collapsible">• Alexandre Dumas</button>
+            <div class="content">
+                <div class="plot-character">
+                    <iframe src="France/duma_plot.html" class="center-iframe"></iframe>
+                </div>  
+            </div>
             </div>
 
             <button class="collapsible">Russia</button>
+
             <div class="content">
-                <p>Dostoyevsky's characters</p>
-                
+                Explore literary characters of:
+                <button class="collapsible">• Fyodor Dostoyevsky</button>
+                <div class="content">
+                    <div class="plot-character">
+                    <iframe src="Russia/dostoyevsky_plot.html" class="center-iframe"></iframe>
+                </div>
+            </div>
+                        
+            <button class="collapsible">• Ivan Turgenev</button>
+                <div class="content">
+                    <div class="plot-character">
+                    <iframe src="Russia/turgenev_plot.html" class="center-iframe"></iframe>
+                </div> 
+            </div>
+                             
+            <button class="collapsible">•Leo Tolstoy</button>
+            <div class="content">
+                <div class="plot-character">
+                    <iframe src="Russia/tolstoy_plot.html" class="center-iframe"></iframe>
+                </div>  
+            </div>
+                     
+
+
             </div>
 
             <button class="collapsible">United Kingdom</button>
             <div class="content">
-                <p>Country 2 content goes here...</p>
+                <div class="content">
+                    Explore literary characters of:
+                    <button class="collapsible">• Jane Austen</button>
+                    <div class="content">
+                        <div class="plot-character">
+                        <iframe src="UK/jane_austen_plot.html" class="center-iframe"></iframe>
+                    </div>
+                </div>
+                            
+                <button class="collapsible">• Oscar Wilde</button>
+                    <div class="content">
+                        <div class="plot-character">
+                        <iframe src="UK/oscar_wilde_plot.html" class="center-iframe"></iframe>
+                    </div> 
+                </div>
+                                 
+                <button class="collapsible">• Virginia Woolf</button>
+                <div class="content">
+                    <div class="plot-character">
+                        <iframe src="UK/virginia_woolf_plot.html" class="center-iframe"></iframe>
+                    </div>  
+                </div>
             </div>
     
         </div>
     </section>
 
     <section>
-        <button class="collapsible"><h3 style="color: #223388;">&#128208 Evaluation (with a bit of math)</h3></button>
+        <button class="collapsible"><h3 style="color: #223388;">&#128208 Future plans</h3></button>
         <div class="content">
-            <p>After applying topic modeling, I ended up with various clusters of words per country.</p>
-
-            <p>Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of the cluster: instead, we have to label them ourselves.
-                In fact, we can't even know for sure which number of topics there actually are! LDA just gives us back the exact number of clusters that we ask it to produce. 
-                So, for each country, I tried to produce from 3 to 7 topics, just to see how it goes.</p>
-        
-                <p>Good news is that there are some metrics that help us evaluate the quality of clusters. I used <a href="https://www.baeldung.com/cs/topic-modeling-coherence-score">UMass Coherence Score:</a></p>
-        
-                <img src="umass.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
-        
-                <p>UMass Coherence score reflects how often words occur together within a topic. 
-                    To calculate it, we take the logarithm of the number of times two words appeared together across the documents 
-                    and divide it by the number of times the word appeared alone. So the greater the number, the better is the coherence score. 
-                    
-                <p>The best u_mass score will be as close to 0 as possible (since the logarithm of 1 is 0).</p> 
-                <img src="umass_2.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
-        
-                <p>To measure the coherence of the whole topic (cluster), we extend the calculation to each pair of top-N words and calculate 
-                    average pairwise coherence score.</p> 
-        </div>
-    </section>
-
-            <section>
-                <button class="collapsible"><h3 style="color: #223388;">&#128172 Visualizations</h3></button>
-                <div class="content">
-                    <p> 
-                        
-                        Naming the topics was one of the hardest parts! 
-
-                        After looking through all the countries, I distinguished the following most common topics: 
-                        
-                        <li>Love-related emotions/Relationships (who could have guessed?)</li>
-                        <li>Urban Life/ Hip-Hop culture/ Gangsta life</li>
-                        <li>Self-reflection, abstract topics</li>
-                        <li>Different types of love: romantic/ heartbreak/ sensual</li>
-                        
-                        <p>Sometimes clusters were formed of noise and artifacts:</p>
-
-                        <li>Music and artist names</li>
-                        <li>Untranslated words (for low-resource languages)</li>
-                    
-                      <p>To my disappointment, I didn't find very specific topics, like "food", "family", or something even more unexpected. 
-                        Well, maybe, the topics weren't that diverse to begin with? Maybe the most popular songs usually 
-                        cherish similar topics and don’t mention anything too eccentric?</p>
     
-                    <p>However, there were singular cases that diverged from the common topics. I would name them:</p>
-                    
-                    <li>Politics and religion</li>
-                    <li>Violence and conflict</li>
-
-                    </p>
                 </div>
-            </section>
-
-            <section>
-
             </section>
 
             <div class="center-iframe-container" id="Results">

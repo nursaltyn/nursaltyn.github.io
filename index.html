@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
 
@@ -425,6 +426,18 @@
             margin-bottom: 10px;
         }
 
+           /* Style the text with icon container */
+        .text-with-icon {
+        display: flex;
+        align-items: center;
+        }
+
+        /* Style the icon */
+        .icon {
+        margin-right: 12px; /* Optional: Add some spacing between icon and text */
+        color: #007bff; /* Optional: Set the color of the icon */
+        }
+
  
 
         footer {
@@ -537,7 +550,14 @@
                     <img src="uni_uds.jpg" alt="University 1 Logo">
                 </div>
                 <h2>Universität des Saarlandes</h2>
-                <p>Saarbrücken, Germany</p>
+    
+                <p><div class="text-with-icon">
+                    <!-- Map marker icon -->
+                    <i class="fa fa-map-marker" aria-hidden="true">&nbsp; </i> 
+                
+                    <!-- Your line of text -->
+                    <p>Saarbrücken, Germany</p>
+                  </div></p>
                 <p>October 2022 - Spring 2025</p>
                 <p><b>Coursework</b>: Computational Linguistics • Statistics with R • Statistical Natural Language Processing • Foun-
                     dations of Empirical Methods • Foundations of Math (Linear Algebra, Calculus) • Python • Neural Networks •
@@ -555,7 +575,15 @@
                     <img src="university-of-warsaw.png" alt="University 2 Logo">
                 </div>
                 <h2>University of Warsaw</h2>
-                <p>Warsaw, Poland</p>
+
+                <p><div class="text-with-icon">
+                    <!-- Map marker icon -->
+                    <i class="fa fa-map-marker" aria-hidden="true">&nbsp; </i> 
+                
+                    <!-- Your line of text -->
+                    <p>Warsaw, Poland</p>
+                  </div></p>
+
                 <p>October 2019 - February 2020;</p>
                 <p>October 2021 - February 2022</p>
                 <p><b>Coursework 4th year</b>: Text Mining and Social Media Mining • Introduction to Pragmatics • 
@@ -572,7 +600,13 @@
                     <img src="kaznu.jpg" alt="University 3 Logo">
                 </div>
                 <h2>Al-Farabi Kazakh National University</h2>
-                <p>Almaty, Kazakhstan</p>
+                <p><div class="text-with-icon">
+                    <!-- Map marker icon -->
+                    <i class="fa fa-map-marker" aria-hidden="true">&nbsp; </i> 
+                
+                    <!-- Your line of text -->
+                    <p>Almaty, Kazakhstan</p>
+                  </div></p>
                 <p>2018 - 2022</p>
                 <p><b>GPA</b>: 3.75/4.0 (best: 4.0)</p>
                 <p><b>Thesis topic</b>: exploring how peculiarities of user-generated content in the Kazakh language 
@@ -592,7 +626,7 @@
         
             <div class="project-container">
                 <img src="project_2.png" alt="Project 2 Image">
-                <h3><a href="projects\project_literature.html">Discovering mental disorders in literary characters</a></h3>
+                <h3><a href="projects\project_literature\project_literature.html">Discovering mental disorders in literary characters</a></h3>
             </div>
 
             <div class="project-container">
