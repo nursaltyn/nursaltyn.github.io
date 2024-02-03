@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my website :)</title>
+    <style>
+        /* Your existing CSS styles */
+
+
+        body {
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            text-align: center;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #223388;
+            color: white;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+
+        h1, h2, h3 {
+            font-size: 20px;
+            line-height: 1.6;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #223388;
+        }
+
+
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px; /* Adjust the value to control the corner roundness */
+            box-shadow: 0 4px 8px rgba(234, 190, 251, 0.1);
+        }
+
+        .collapsible {
+            cursor: pointer;
+            padding: 5px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+
+        .active, .collapsible:hover {
+            background-color: #6f82de;
+            color: white;
+        }
+
+        .content {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .content img {
+            display: block;
+            margin: auto;
+            max-width: 100%; /* Ensure the image doesn't exceed its original size */
+        }
+
+        ul {
+        list-style-type: none; /* Remove default list style */
+        padding: 0; /* Remove default padding */
+        }
+
+
+        ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        li {
+        margin-bottom: 8px; /* Optional: Add some spacing between list items */
+        }
+
+        li::before {
+        content: "\2022"; /* Unicode character for filled circle */
+        color: #ff0000; /* Optional: Change the color of the filled circle */
+        font-size: 1.5em; /* Optional: Adjust the size of the filled circle */
+        display: inline-block;
+        width: 1em; /* Optional: Adjust the width of the filled circle */
+        margin-right: 0.5em; /* Optional: Add some spacing between the filled circle and the text */
+        }
+
+        .center-iframe-container {
+        width: 80%; /* Adjust the width as needed */
+        padding: 20px; /* Adjust the padding as needed */
+        box-sizing: border-box; /* Include padding in the total width */
+        background-color: #f0f0f0; /* Optional: Set a background color */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        margin-left: 180px;
+        text-align: center;
+        }
+
+        .center-iframe {
+        width: 100%; /* Make sure the iframe takes 100% of the container width */
+        height: 700px; /* Set a fixed height or adjust as needed */
+        border: none; /* Remove iframe border */
+        }
+
+            /* Style the link to have white text */
+        footer a {
+        color: white;
+        text-decoration: none; /* Optional: Remove the default underline */
+        }
+
+                /* Style the link on hover if needed */
+        footer a:hover {
+        text-decoration: underline;
+        }   
+
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #223388;
+            color: white;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 style="font-size: 2.5em;">🎶 Discovering mental disorders in literary characters 🌍</h1>
+        <p style="font-style: italic;">What literary work can tell us about mental health history?</p>
+    </header>
+
+    <nav>
+        <a href="#Results">Results</a>
+        <a href="map_top_topics.html">Visualizations</a>
+        <a href="https://huggingface.co/spaces/NursNurs/detect_mental_disorder">Diagnose your character</a>
+        <!-- Add more links for additional pages -->
+    </nav>
+
+    <section>
+        <h2 style="color: #223388;">🎵 About the project</h2>
+        <p>In this project, we tried to diagnose literary characters with mental disorders according to International
+            Classification of Diseases (ICD). </p>
+
+            <ul>
+                <li><a href="#Results"><b>Check out our overal statistics by countries and authors</b></a></li>
+                <li>Explore each country and character with the 3D PCA visualization</li>
+                <li>Try out our <a href="https://huggingface.co/spaces/NursNurs/detect_mental_disorder">mini-app</a> where you can try to diagnose any other literary character or even yourself based on provided description (please note this
+                     can't be used for diagnostics and can be used for entertainment only).
+                </li>
+              </ul></p>
+
+        <p><em>This project was developed within the university class.</em> </p>
+
+    </section>
+
+
+    <section>
+        <button class="collapsible"><h3 style="color: #223388;">&#128218 Background & Motivation</h3></button>
+        <div class="content">
+            <p>Madness is a very prominent yet controversial topic; every society in different periods of time 
+                approached it differently. Some cultures ostracize and isolate "crazy" people, some cultures hold them for saint. It hasn't 
+                been so long since psychiatry developed as a science, and the classfication and diagnostic criteria for various disorders
+                were developed (let alone the fact that <b>what</b> is considered as a disorder has also undergone changes).</p>
+    
+            <p>
+            <b>Many writers have described madness in their work without having any labels for the disorders.</b> 
+            
+            <p>Some traits weren't recognized
+             as symptoms even; for instance, sleeping all the time and having no energy could be acribed to lazyness and faulty character
+             rather than, say, depression, and what is now considered as a bipolar disorder could be viewed as a moody personality. Since strict 
+             labels and diagnostic criteria didn't exist, we can only assume which disorders the authors described. And since writers often capture the spirit of their time in their work - 
+            whether by choice or by design - we can estimate societal views and attitudes to madness from their writings. 
+            </p>
+            
+            <p>There are many questions one can pose: 
+                <ul>
+                    <li><b>Do depicted disorders differ by time period/country/author?</b></li>
+                    <li><b>Do popularly described disorders correlate with historical events/context?</b> For example, can it be that after wars,
+                     more literary characters were described with PTSD, and after famine more characters had eating disorders?</li>
+                    <li><b>Do male and female characters differ in what disorders are assigned to them?</b> For example, could female characters
+                     be more often associated with depression and histeria, while male characters - with schizophrenia and asocial disorders?</li>
+                  </ul></p>
+                  <p>This work is an attempt to address some of these questions using computational approach.</p>
+    
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible"><h3 style="color: #223388;">&#128218 Methodology</h3></button>
+        <div class="content">
+            <p>I took top-200 songs popular in each of the 38 countries. To select the songs, I used Spotify's weekly total charts and selected 
+                the most popular songs of all times* for that country.</p>
+                
+            <p>Then I scraped the lyrics, translated them to English and preprocessed 
+                using basic techniques (tokenization, lemmatization, lowercasing, deleting punctuation and stop-words**). 
+                Then I applied topic modeling using LDA (Latent Dirichlet Allocation) to get the topics for each country. </p> 
+                    
+                
+            <p>Tools utilized:</p>
+
+                <ul>
+                    <li>Genius API - to scrape the lyrics of the songs;</li>
+                    <li>Google API - to translate the lyrics to English;</li>
+                    <li>Gensim library - for topic modeling;</li>
+                    <li>pyLDAvis library - to visualize the results;</li>
+                    <li>Kworb.net - for the names of the songs</li>
+                    <!-- Add more list items as needed -->
+                </ul>
+
+            <p>*from the moment Spotify entered the country till March 2023</p>
+            <p>**I also used <b>filter_extremes</b> function from <b>gensim</b> module to eliminate the most common words 
+                (that are met in more than 50% of the documents) and the least common, rather eccentric/too specific 
+                words (that are met in less than 3 documents) – for example, names of the entities, rare words 
+                (like “pathointelligence” or “bermuda triangle”), etc. The function also takes only the top N words from the remaining corpus 
+                (in my case, N was set to 15 000).
+            </p></p>
+    
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible"><h3 style="color: #223388;">&#128208 Evaluation (with a bit of math)</h3></button>
+        <div class="content">
+            <p>After applying topic modeling, I ended up with various clusters of words per country.</p>
+
+            <p>Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of the cluster: instead, we have to label them ourselves.
+                In fact, we can't even know for sure which number of topics there actually are! LDA just gives us back the exact number of clusters that we ask it to produce. 
+                So, for each country, I tried to produce from 3 to 7 topics, just to see how it goes.</p>
+        
+                <p>Good news is that there are some metrics that help us evaluate the quality of clusters. I used <a href="https://www.baeldung.com/cs/topic-modeling-coherence-score">UMass Coherence Score:</a></p>
+        
+                <img src="umass.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
+        
+                <p>UMass Coherence score reflects how often words occur together within a topic. 
+                    To calculate it, we take the logarithm of the number of times two words appeared together across the documents 
+                    and divide it by the number of times the word appeared alone. So the greater the number, the better is the coherence score. 
+                    
+                <p>The best u_mass score will be as close to 0 as possible (since the logarithm of 1 is 0).</p> 
+                <img src="umass_2.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
+        
+                <p>To measure the coherence of the whole topic (cluster), we extend the calculation to each pair of top-N words and calculate 
+                    average pairwise coherence score.</p> 
+        </div>
+    </section>
+
+            <section>
+                <button class="collapsible"><h3 style="color: #223388;">&#128172 Results</h3></button>
+                <div class="content">
+                    <p> 
+                        
+                        Naming the topics was one of the hardest parts! 
+
+                        After looking through all the countries, I distinguished the following most common topics: 
+                        
+                        <li>Love-related emotions/Relationships (who could have guessed?)</li>
+                        <li>Urban Life/ Hip-Hop culture/ Gangsta life</li>
+                        <li>Self-reflection, abstract topics</li>
+                        <li>Different types of love: romantic/ heartbreak/ sensual</li>
+                        
+                        <p>Sometimes clusters were formed of noise and artifacts:</p>
+
+                        <li>Music and artist names</li>
+                        <li>Untranslated words (for low-resource languages)</li>
+                    
+                      <p>To my disappointment, I didn't find very specific topics, like "food", "family", or something even more unexpected. 
+                        Well, maybe, the topics weren't that diverse to begin with? Maybe the most popular songs usually 
+                        cherish similar topics and don’t mention anything too eccentric?</p>
+    
+                    <p>However, there were singular cases that diverged from the common topics. I would name them:</p>
+                    
+                    <li>Politics and religion</li>
+                    <li>Violence and conflict</li>
+
+                    </p>
+                </div>
+            </section>
+
+            <section>
+
+                <h2>Results</h2>
+            </section>
+
+            <div class="center-iframe-container" id="Results">
+                <iframe src="https://mental-disorders-literature-9n7i.onrender.com/" class="center-iframe"></iframe>
+              </div>
+
+
+
+    <footer>
+        <p>&copy; Project contributors: <a href="https://www.linkedin.com/in/daniil-gurgurov/">Daniil Gurgurov</a>, <a href="https://www.linkedin.com/in/nursulu-sagimbayeva-61383a208/">Nursulu Sagimbayeva</a>, <a href="https://www.linkedin.com/in/asmaaibrahiim/">Asmaa Ibrahim</a>, Antonia wächter. All rights reserved.</p>
+
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
