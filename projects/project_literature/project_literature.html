@@ -101,10 +101,8 @@
             max-width: 100%; /* Ensure the image doesn't exceed its original size */
         }
 
-        ul {
-        list-style-type: none; /* Remove default list style */
-        padding: 0; /* Remove default padding */
-        }
+
+
 
 
         ul {
@@ -112,17 +110,10 @@
             line-height: 1.6;
         }
 
+        
+
         li {
         margin-bottom: 8px; /* Optional: Add some spacing between list items */
-        }
-
-        li::before {
-        content: "\2022"; /* Unicode character for filled circle */
-        color: #ff0000; /* Optional: Change the color of the filled circle */
-        font-size: 1.5em; /* Optional: Adjust the size of the filled circle */
-        display: inline-block;
-        width: 1em; /* Optional: Adjust the width of the filled circle */
-        margin-right: 0.5em; /* Optional: Add some spacing between the filled circle and the text */
         }
 
         .center-iframe-container {
@@ -180,8 +171,8 @@
 
     <section>
         <h2 style="color: #223388;">🎵 About the project</h2>
-        <p>In this project, we tried to diagnose literary characters with mental disorders according to International
-            Classification of Diseases (ICD). </p>
+        <p>In this project, we tried to diagnose literary characters with mental disorders according to <a href="https://icd.who.int/en">International
+            Classification of Diseases (ICD).</a></p>
 
             <ul>
                 <li><a href="#Results"><b>Check out our overal statistics by countries and authors</b></a></li>
@@ -235,15 +226,16 @@
             </p>
             
             <p>There are many questions one can pose: 
-                <ul>
-                    <li><b>Do depicted disorders differ by time period/country/author?</b></li>
-                    <li><b>Do popularly described disorders correlate with historical events/context?</b> For example, can it be that after wars,
-                     more literary characters were described with PTSD, and after famine more characters had eating disorders?</li>
-                    <li><b>Do male and female characters differ in what disorders are assigned to them?</b> For example, could female characters
-                     be more often associated with depression and histeria, while male characters - with schizophrenia and asocial disorders?</li>
-                  </ul></p>
-                  <p>This work is an attempt to address some of these questions using computational approach.</p>
-    
+                <ol>
+                    <li><b>Get descriptions of characters.</b> For this step, we used ChatGPT using the same prompt for each character.
+                        If ChatGPT was confused or tried to claim such a character doesn't exist, we discarded the character to not include false data on purpose.
+                        While this step is not perfect, it allowed us to get preliminary descriptions of each character that were of the same size, style, and format.
+                    <li><b>Get descriptions of disorders.</b> For this step, we used API of the <a href="https://icd.who.int/en">ICD</a>.</li>
+                    <li><b>Preprocess descriptions (tokenize, remove stop-words, lemmatize, etc.)</b></li>
+                    <li><b>Convert all descriptions into embeddings.</b></li> We used sentence transformers.
+                    <li><b>Compute the cosine similarity between each character and each disorder description.</b></li>
+                    <li><b>Process and visualize the results (group by gender, time, country).</b></li>
+                  </ol></p>    
         </div>
     </section>
 
@@ -367,6 +359,15 @@
     <section>
         <button class="collapsible"><h3 style="color: #223388;">&#128208 Future plans</h3></button>
         <div class="content">
+
+            <ul>
+
+            <li>Get high-quality descriptions of characters (e.g., through crowdsourcing)</li>
+            <li>Obtain more detailed descriptions of disorders</li>
+            <li>Cover more authors and countries for representativeness</li>
+            <li>Identify a threshold for accepting a diagnose (not all characters have to have disorders!)</li>
+                
+            </ul>
     
                 </div>
             </section>
