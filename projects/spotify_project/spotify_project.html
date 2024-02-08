@@ -4,6 +4,10 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my website :)</title>
@@ -84,23 +88,88 @@
             max-width: 100%; /* Ensure the image doesn't exceed its original size */
         }
 
-        ul {
-        list-style-type: none; /* Remove default list style */
-        padding: 0; /* Remove default padding */
-        }
-
         li {
         margin-bottom: 8px; /* Optional: Add some spacing between list items */
         }
 
-        li::before {
-        content: "\2022"; /* Unicode character for filled circle */
-        color: #ff0000; /* Optional: Change the color of the filled circle */
-        font-size: 1.5em; /* Optional: Adjust the size of the filled circle */
-        display: inline-block;
-        width: 1em; /* Optional: Adjust the width of the filled circle */
-        margin-right: 0.5em; /* Optional: Add some spacing between the filled circle and the text */
+        .main-slider {
+        position: relative;
+        max-width: 800px; /* Adjust the maximum width as needed */
+        margin: 20px auto; /* Center the slider */
         }
+
+        .swiper-container {
+        overflow: hidden; /* Hide overflow to ensure only one image is visible */
+        }
+
+        .swiper-slide {
+            border-radius: 10px; /* Rounded corners for the slides */
+            overflow: hidden; /* Hide overflow to maintain rounded corners */
+            position: relative;
+        }
+ 
+
+        .swiper-slide img {
+            width: 100%; /* Make images fill the slide */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        .swiper-wrapper {
+            transition: transform 0.3s ease; /* Add a smooth transition effect for slide changes */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px; /* Adjust arrow width */
+            height: 30px; /* Adjust arrow height */
+            background-color: #000; /* Arrow background color */
+            color: #fff; /* Arrow color */
+            border-radius: 50%; /* Rounded corners for arrows */
+            cursor: pointer;
+        }
+
+        .swiper-button-next {
+            right: 0; /* Position next arrow on the right */
+        }
+
+        .swiper-button-prev {
+            left: 0; /* Position prev arrow on the left */
+        }
+
+
+        .swiper-wrapper {
+            transition: transform 0.3s ease; /* Add a smooth transition effect for slide changes */
+        }
+
+        .slide-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        padding: 20px; /* Adjust padding as needed */
+        box-sizing: border-box;
+        color: #fff; /* Text color for the description */
+        opacity: 0; /* Initially hide the description */
+        transition: opacity 0.3s; /* Add a smooth transition effect for opacity */
+    }
+
+    .swiper-slide:hover .slide-description {
+        opacity: 1; /* Display the description on hover */
+    }
+
+    .slide-description h3 {
+        margin-bottom: 5px;
+        font-size: 16px; /* Adjust font size as needed */
+    }
+
+    .slide-description p {
+        font-size: 14px; /* Adjust font size as needed */
+        line-height: 1.4;
+    }
 
         footer {
             text-align: center;
@@ -126,6 +195,26 @@
         <a href="countries.html">Explore topics in each country</a>
         <!-- Add more links for additional pages -->
     </nav>
+
+    <div class="swiper-container main-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="cover.png" alt="Slide 1"></div>
+            <div class="swiper-slide"><img src="topic2.JPG" alt="Slide 2"></div>
+            <div class="swiper-slide"><img src="topic3.JPG" alt="Slide 2"></div>
+
+            <!-- Add more slides as needed -->
+        </div>
+        <!-- Navigation Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    
+    <!-- <section>
+        <img src="cover.png" alt="Your GIF">
+    </section> -->
 
     <section>
         <h2 style="color: #4CAF50;">🎵 About the project</h2>
@@ -156,20 +245,26 @@
             <p>Tools utilized:</p>
 
                 <ul>
-                    <li>Genius API - to scrape the lyrics of the songs;</li>
-                    <li>Google API - to translate the lyrics to English;</li>
-                    <li>Gensim library - for topic modeling;</li>
-                    <li>pyLDAvis library - to visualize the results;</li>
-                    <li>Kworb.net - for the names of the songs</li>
+                    <li><a href="https://docs.genius.com/">Genius API</a> - to scrape the lyrics of the songs;</li>
+                    <li><a href="https://rapidapi.com/googlecloud/api/google-translate1">Google Translate API</a> - to translate the lyrics to English;</li>
+                    <li><a href="https://pypi.org/project/gensim/">Gensim library</a> - for topic modeling;</li>
+                    <li><a href="https://pypi.org/project/pyLDAvis/#:~:text=pyLDAvis%20is%20designed%20to%20help,an%20interactive%20web%2Dbased%20visualization.">pyLDAvis library</a> - to visualize the results;</li>
+                    <li><a href="https://kworb.net/">Kworb.net</a> - for the names of the songs</li>
                     <!-- Add more list items as needed -->
                 </ul>
 
-            <p>*from the moment Spotify entered the country till March 2023</p>
-            <p>**I also used <b>filter_extremes</b> function from <b>gensim</b> module to eliminate the most common words 
+            <p>The very first results were pretty meaningless (image below), so I had to go through many iterations of preprocessing to start seeing
+                 some coherence it topics.
+            </p>
+
+            <img src="early_result.png" alt="Early results of LDAe" style="width: 100%; max-width: 800px; height: auto;">
+
+            <p><em>*from the moment Spotify entered the country till March 2023</em></p>
+            <p><em>**I also used <b>filter_extremes</b> function from <b>gensim</b> module to eliminate the most common words 
                 (that are met in more than 50% of the documents) and the least common, rather eccentric/too specific 
                 words (that are met in less than 3 documents) – for example, names of the entities, rare words 
                 (like “pathointelligence” or “bermuda triangle”), etc. The function also takes only the top N words from the remaining corpus 
-                (in my case, N was set to 15 000).
+                (in my case, N was set to 15 000).</em>
             </p></p>
     
         </div>
@@ -178,10 +273,11 @@
     <section>
         <button class="collapsible"><h3 style="color: #7E5BCC;">&#128208 Evaluation (with a bit of math)</h3></button>
         <div class="content">
-            <p>After applying topic modeling, I ended up with various clusters of words per country.</p>
+            <p>After applying topic modeling, I ended up with various clusters of words per country.
+            </p>
 
-            <p>Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of the cluster: instead, we have to label them ourselves.
-                In fact, we can't even know for sure which number of topics there actually are! LDA just gives us back the exact number of clusters that we ask it to produce. 
+            <p>
+                One thing about LDA is that we don't know for sure which number of topics there actually is. LDA just gives us back the exact number of clusters that we ask it to produce. 
                 So, for each country, I tried to produce from 3 to 7 topics, just to see how it goes.</p>
         
                 <p>Good news is that there are some metrics that help us evaluate the quality of clusters. I used <a href="https://www.baeldung.com/cs/topic-modeling-coherence-score">UMass Coherence Score:</a></p>
@@ -204,15 +300,36 @@
                 <button class="collapsible"><h3 style="color: #7E5BCC;">&#128172 Results</h3></button>
                 <div class="content">
                     <p> 
-                        
+                        Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of 
+                        the cluster: instead, we have to label them ourselves.
                         Naming the topics was one of the hardest parts! 
 
                         After looking through all the countries, I distinguished the following most common topics: 
                         
                         <li>Love-related emotions/Relationships (who could have guessed?)</li>
+                        <img src="topic1.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
+
                         <li>Urban Life/ Hip-Hop culture/ Gangsta life</li>
                         <li>Self-reflection, abstract topics</li>
                         <li>Different types of love: romantic/ heartbreak/ sensual</li>
+                        
+                        <div class="swiper-container main-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="topic1.png" alt="Slide 1">
+                                    <div class="slide-description">
+                                        <h3>Image Title 1</h3>
+                                        <p>Love-related emotions/Relationships (who could have guessed?)</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide"><img src="topic2.JPG" alt="Slide 2"></div>
+                                <!-- Add more slides as needed -->
+                            </div>
+                             <!-- Navigation Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                        </div>
                         
                         <p>Sometimes clusters were formed of noise and artifacts:</p>
 
@@ -238,6 +355,22 @@
     </footer>
 
     <script>
+        var mainSlider = new Swiper('.main-slider', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            centeredSlides: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+        });
+    </script>
+
+    <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
 
@@ -253,6 +386,7 @@
             });
         }
     </script>
+
 </body>
 
 </html>
