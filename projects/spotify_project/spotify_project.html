@@ -19,9 +19,18 @@
             /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
             font-family: 'Montserrat', 'Arial', sans-serif;
             margin: 20px;
-            background-color: #f8f8f8;
+            background-color: #262328;
             color: #333;
+            /* background-image: url('pexels-dids-2911519.jpg'); */
+            background-size: cover; /* Adjust background size as needed */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background image repetition */
+            /* background-color: rgba(255, 255, 255, 0.8); Set the background color with opacity */
+            /* Adjust the last value (0.8) for the desired opacity (0 to 1) */
         }
+        
+
+        
 
         header {
             text-align: center;
@@ -41,13 +50,18 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #555;
+            color: #ffffff;
             font-weight: bold;
             transition: color 0.3s ease-in-out;
         }
 
         nav a:hover {
             color: #4CAF50;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
         }
 
 
@@ -58,6 +72,11 @@
             padding: 20px;
             border-radius: 15px; /* Adjust the value to control the corner roundness */
             box-shadow: 0 4px 8px rgba(234, 190, 251, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.05); 
         }
 
         .collapsible {
@@ -90,12 +109,21 @@
 
         li {
         margin-bottom: 8px; /* Optional: Add some spacing between list items */
+        line-height: 1.6;
+        }
+
+        .main-slider-intro {
+        position: relative;
+        max-width: 1000px; /* Adjust the maximum width as needed */
+        margin: 20px auto; /* Center the slider */
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
         }
 
         .main-slider {
         position: relative;
         max-width: 800px; /* Adjust the maximum width as needed */
         margin: 20px auto; /* Center the slider */
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
         }
 
         .swiper-container {
@@ -106,8 +134,12 @@
             border-radius: 10px; /* Rounded corners for the slides */
             overflow: hidden; /* Hide overflow to maintain rounded corners */
             position: relative;
+            transition: transform 0.3s ease; /* Add a smooth transition effect */
         }
- 
+        
+        .main-slider-intro:hover {
+            transform: scale(1.05); /* Scale the slider on hover */
+        }
 
         .swiper-slide img {
             width: 100%; /* Make images fill the slide */
@@ -161,6 +193,16 @@
         opacity: 1; /* Display the description on hover */
     }
 
+    .slide-description a {
+    color: inherit; /* Inherit the text color from the parent */
+    text-decoration: underline; /* Add underline effect on hover */
+    font-size: 20px;
+    }
+
+    .slide-description a:hover {
+        color: #72e16a; /* Inherit the text color on hover */
+    }
+
     .slide-description h3 {
         margin-bottom: 5px;
         font-size: 16px; /* Adjust font size as needed */
@@ -169,6 +211,10 @@
     .slide-description p {
         font-size: 14px; /* Adjust font size as needed */
         line-height: 1.4;
+    }
+
+    .swiper-slide:hover .slide-description a {
+    color: 72e16a; /* Change the text color to green on hover if there's an anchor tag */
     }
 
         footer {
@@ -190,17 +236,30 @@
     </header>
 
     <nav>
-        <a href="map_top_languages.html">Most popular languages</a>
-        <a href="map_top_topics.html">Most popular topics</a>
-        <a href="countries.html">Explore topics in each country</a>
+        <a href="map_top_topics.html">Topics map</a>
+        <a href="map_top_languages.html">Languages map</a>
+        <a href="countries.html">Explore each country</a>
         <!-- Add more links for additional pages -->
     </nav>
 
-    <div class="swiper-container main-slider">
+    <div class="swiper-container main-slider-intro">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="cover.png" alt="Slide 1"></div>
-            <div class="swiper-slide"><img src="topic2.JPG" alt="Slide 2"></div>
-            <div class="swiper-slide"><img src="topic3.JPG" alt="Slide 2"></div>
+            <div class="swiper-slide"><img src="cover.png" alt="Slide 1">
+                <div class="slide-description">
+                    <h3><a href="map_top_topics.html">Discover most popular song topics</a></h3>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="cover2.JPG" alt="Slide 2">
+                <div class="slide-description">
+                    <h3><a href="map_top_topics.html">Compare most popular song languages</a></h3>
+                </div>
+            
+            </div>
+            <div class="swiper-slide"><img src="cover3.png" alt="Slide 2">
+                <div class="slide-description">
+                    <h3><a href="countries.html">Explore in detail the topics of each country</a></h3>
+                </div>
+            </div>
 
             <!-- Add more slides as needed -->
         </div>
@@ -223,13 +282,115 @@
         <p>I started wondering: 
             <ul>
                 <li>Is love indeed the most common topic in all countries and languages?</li>
-                <li>Can it be so that in different countries, 
-                    different topics are preferred? One could blindly assume the topic of money to 
+                <li>Can it be so that <b>in different countries, 
+                    different topics are preferred?</b> One could blindly assume the topic of money to 
                     be popular in the US, and the topic of politics, for example, in Russia.</li>
                 <li>What languages of songs are popular in different countries?</li>
               </ul></p>
         <p>And since I had to choose a project for my Computational Linguisitcs class, I decided to explore this idea.</p>
     </section>
+
+    <section>
+        <!-- <button class="collapsible"><h3 style="color: #7E5BCC;">&#128172 Results</h3></button> -->
+        <!-- <div class="content"> -->
+            <h2 style="color: #4CAF50;">&#128172 Results</h2>
+            <p> 
+                After looking through all the countries, I distinguished the following most common topics: 
+                
+                <!-- <li>Love-related emotions/Relationships (who could have guessed?)</li>
+                <li>Urban Life/ Hip-Hop culture/ Gangsta life</li>
+                <li>Self-reflection, abstract topics</li>
+                <li>Different types of love: romantic/ heartbreak/ sensual</li>
+            </li> -->
+
+            
+
+                
+                <div class="swiper-container main-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="topic1.png" alt="Slide 1">
+                            <div class="slide-description">
+                                <h3>Topic 1</h3>
+                                <p>Love-related emotions/Relationships (who could have guessed?)</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic2.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 2</h3>
+                                <p>Urban Life/ Hip-Hop culture/ Gangsta life</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic3.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 3</h3>
+                                <p>Self-reflection, abstract topics</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic4.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 4</h3>
+                                <p>"Find", "better", "cry", "hurt", "stay"... Looks like a heartbreak to me</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic5.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 5</h3>
+                                <p>"Night", "crazy", "kiss", "tequila", "dancing"... Sounds like a wild party!</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic6.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 6</h3>
+                                <p>This topic appeared in Egypt only and deviates notably from other common topics.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic7.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 7</h3>
+                                <p>This topic appeared in Greece only and deviates notably from other common topics.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic8.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 8</h3>
+                                <p>This is a data artifact containing song and artist names.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"><img src="topic9.JPG" alt="Slide 2">
+                            <div class="slide-description">
+                                <h3>Topic 9</h3>
+                                <p>This is a data artifact containing poorly translated words from low-resource languages.</p>
+                            </div>
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                     <!-- Navigation Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                </div>
+        
+                <p>As you can see, love in different forms <em>(and money)</em> indeed rules the chart in practically all the countries!</p>
+
+                <p>To my disappointment, I didn't find very specific topics, like "food", "family", or something even more unexpected. 
+                    <b>Well, maybe, the topics weren't that diverse to begin with? Maybe the most popular songs usually 
+                        don’t mention anything too eccentric?</b>
+                    </p>
+
+                <p>However, there were singular cases that diverged from the common topics. I would name them:</p>
+                
+                <li><b>Politics and religion</b> - a topic observed in Egypt</li>
+                <li><b>Violence and conflict</b> - a topic observed in Greece</li>
+
+                <p>Sometimes clusters were also formed of noise and artifacts:</p>
+
+                <li><b>Music and artist names</b></li>
+                <li><b>Untranslated words</b> (for low-resource languages)
+            </p>
+        <!-- </div> -->
+    </section>
+
 
     <section>
         <button class="collapsible"><h3 style="color: #7E5BCC;">&#128218 Methodology</h3></button>
@@ -258,6 +419,10 @@
             </p>
 
             <img src="early_result.png" alt="Early results of LDAe" style="width: 100%; max-width: 800px; height: auto;">
+
+            <p>Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of 
+                the cluster: instead, we have to label them ourselves.
+                Naming the topics was one of the hardest parts! Click on the results to see what I found out.</p>
 
             <p><em>*from the moment Spotify entered the country till March 2023</em></p>
             <p><em>**I also used <b>filter_extremes</b> function from <b>gensim</b> module to eliminate the most common words 
@@ -293,61 +458,10 @@
         
                 <p>To measure the coherence of the whole topic (cluster), we extend the calculation to each pair of top-N words and calculate 
                     average pairwise coherence score.</p> 
+
+                
         </div>
     </section>
-
-            <section>
-                <button class="collapsible"><h3 style="color: #7E5BCC;">&#128172 Results</h3></button>
-                <div class="content">
-                    <p> 
-                        Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of 
-                        the cluster: instead, we have to label them ourselves.
-                        Naming the topics was one of the hardest parts! 
-
-                        After looking through all the countries, I distinguished the following most common topics: 
-                        
-                        <li>Love-related emotions/Relationships (who could have guessed?)</li>
-                        <img src="topic1.png" alt="Formula for UMass Coherence Score" style="width: 70%; max-width: 400px; height: auto;">
-
-                        <li>Urban Life/ Hip-Hop culture/ Gangsta life</li>
-                        <li>Self-reflection, abstract topics</li>
-                        <li>Different types of love: romantic/ heartbreak/ sensual</li>
-                        
-                        <div class="swiper-container main-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="topic1.png" alt="Slide 1">
-                                    <div class="slide-description">
-                                        <h3>Image Title 1</h3>
-                                        <p>Love-related emotions/Relationships (who could have guessed?)</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide"><img src="topic2.JPG" alt="Slide 2"></div>
-                                <!-- Add more slides as needed -->
-                            </div>
-                             <!-- Navigation Arrows -->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <!-- Add Pagination -->
-                                <div class="swiper-pagination"></div>
-                        </div>
-                        
-                        <p>Sometimes clusters were formed of noise and artifacts:</p>
-
-                        <li>Music and artist names</li>
-                        <li>Untranslated words (for low-resource languages)</li>
-                    
-                      <p>To my disappointment, I didn't find very specific topics, like "food", "family", or something even more unexpected. 
-                        Well, maybe, the topics weren't that diverse to begin with? Maybe the most popular songs usually 
-                        cherish similar topics and don’t mention anything too eccentric?</p>
-    
-                    <p>However, there were singular cases that diverged from the common topics. I would name them:</p>
-                    
-                    <li>Politics and religion</li>
-                    <li>Violence and conflict</li>
-
-                    </p>
-                </div>
-            </section>
 
 
     <footer>
@@ -369,6 +483,23 @@
             spaceBetween: 20,
         });
     </script>
+
+<script>
+    var mainSlider = new Swiper('.main-slider-intro', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+    });
+</script>
+
 
     <script>
         var coll = document.getElementsByClassName("collapsible");
