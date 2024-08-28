@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my website :)</title>
+    <style>
+        /* Your existing CSS styles */
+
+
+        body {
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #262328;
+            color: #333;
+            /* background-image: url('pexels-dids-2911519.jpg'); */
+            background-size: cover; /* Adjust background size as needed */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background image repetition */
+            /* background-color: rgba(255, 255, 255, 0.8); Set the background color with opacity */
+            /* Adjust the last value (0.8) for the desired opacity (0 to 1) */
+        }
+        
+
+        
+
+        header {
+            text-align: center;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px; /* Adjust the value to control the corner roundness */
+            box-shadow: 0 4px 8px rgba(234, 190, 251, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.05); 
+        }
+
+        .collapsible {
+            cursor: pointer;
+            padding: 5px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+
+        .active, .collapsible:hover {
+            background-color: #72e16a;
+            color: white;
+        }
+
+        .content {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .content img {
+            display: block;
+            margin: auto;
+            max-width: 100%; /* Ensure the image doesn't exceed its original size */
+        }
+
+        li {
+        margin-bottom: 8px; /* Optional: Add some spacing between list items */
+        line-height: 1.6;
+        }
+
+        .main-slider-intro {
+        position: relative;
+        max-width: 1000px; /* Adjust the maximum width as needed */
+        margin: 20px auto; /* Center the slider */
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        .main-slider {
+        position: relative;
+        max-width: 800px; /* Adjust the maximum width as needed */
+        margin: 20px auto; /* Center the slider */
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        .swiper-container {
+        overflow: hidden; /* Hide overflow to ensure only one image is visible */
+        }
+
+        .swiper-slide {
+            border-radius: 10px; /* Rounded corners for the slides */
+            overflow: hidden; /* Hide overflow to maintain rounded corners */
+            position: relative;
+            transition: transform 0.3s ease; /* Add a smooth transition effect */
+        }
+        
+        .main-slider-intro:hover {
+            transform: scale(1.05); /* Scale the slider on hover */
+        }
+
+        .swiper-slide img {
+            width: 100%; /* Make images fill the slide */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        .swiper-wrapper {
+            transition: transform 0.3s ease; /* Add a smooth transition effect for slide changes */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px; /* Adjust arrow width */
+            height: 30px; /* Adjust arrow height */
+            background-color: #365996; /* Arrow background color */
+            color: #fff; /* Arrow color */
+            border-radius: 50%; /* Rounded corners for arrows */
+            cursor: pointer;
+        }
+
+        .swiper-button-next {
+            right: 0; /* Position next arrow on the right */
+        }
+
+        .swiper-button-prev {
+            left: 0; /* Position prev arrow on the left */
+        }
+
+
+        .swiper-wrapper {
+            transition: transform 0.3s ease; /* Add a smooth transition effect for slide changes */
+        }
+
+        .slide-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        padding: 20px; /* Adjust padding as needed */
+        box-sizing: border-box;
+        color: #fff; /* Text color for the description */
+        opacity: 0; /* Initially hide the description */
+        transition: opacity 0.3s; /* Add a smooth transition effect for opacity */
+    }
+
+    .swiper-slide:hover .slide-description {
+        opacity: 1; /* Display the description on hover */
+    }
+
+    .slide-description a {
+    color: inherit; /* Inherit the text color from the parent */
+    text-decoration: underline; /* Add underline effect on hover */
+    font-size: 20px;
+    }
+
+    .slide-description a:hover {
+        color: #72e16a; /* Inherit the text color on hover */
+    }
+
+    .slide-description h3 {
+        margin-bottom: 5px;
+        font-size: 16px; /* Adjust font size as needed */
+    }
+
+    .slide-description p {
+        font-size: 14px; /* Adjust font size as needed */
+        line-height: 1.4;
+    }
+
+    .swiper-slide:hover .slide-description a {
+    color: 72e16a; /* Change the text color to green on hover if there's an anchor tag */
+    }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #365996;
+            color: white;
+            border-radius: 10px; /* Adjust the value to control the corner roundness */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 style="font-size: 2.5em;"> &#129504; Brain-Controlled Kitchen &#127859;</h1>
+        <p style="font-style: italic;">A seminar project on Brain-Computer Interfaces.</p>
+    </header>
+
+    
+
+
+    <div class="swiper-container main-slider-intro">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="kitchen1.jpg" alt="Slide 1">
+                <div class="slide-description">
+                    <h3><a href="map_top_topics.html">Check out the video of the BCI interaction</a></h3>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="kitchen2.jpg" alt="Slide 2">
+                <div class="slide-description">
+                    <h3><a href="map_top_languages.html">Check out the video of the BCI interaction</a></h3>
+                </div>
+            
+            </div>
+            <!-- <div class="swiper-slide"><img src="cover3.png" alt="Slide 2">
+                <div class="slide-description">
+                    <h3><a href="countries.html">Explore in detail the topics of each country</a></h3>
+                </div>
+            </div> -->
+
+            <!-- Add more slides as needed -->
+        </div>
+        <!-- Navigation Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    
+    <!-- <section>
+        <img src="cover.png" alt="Your GIF">
+    </section> -->
+
+    <section>
+        <h2 style="color: #4CAF50;">&#129504; About the project</h2>
+        <p> Cooking can be both the most fun and the most annoying activity. 
+            Think of the time when you wanted to try
+            a new recipe: your hands are covered with dough and oil, your phone screen keeps switching off, you forget what the next step was, 
+            and, while you are washing
+            your hands and trying to scroll through the recipe, the sauce in your pan starts boiling and vegetables in the oven get overcooked... </p>
+            
+        <p>   
+            Multitasking can be truly challenging, and that's why DFKI has built a smart kitchen with a cooking assistant Kochbot, which helps you navigate through
+            the recipe. You interact with Kochbot via speech, and it tells you the next step in the recipe, so you can focus on cooking directly. Sounds good, right?
+        </p>
+
+        <p> But we went a step further and asked ourselves: <b>what if you could navigate through the recipe just with your thoughts?</b>
+        </p>
+    </section>
+
+    <section>
+        <!-- <button class="collapsible"><h3 style="color: #7E5BCC;">&#128172 Results</h3></button> -->
+        <!-- <div class="content"> -->
+            <h2 style="color: #4CAF50;">&#128172 Interaction plan</h2>
+            <p> 
+                We had in our posession:
+
+                <ul>
+                    <li>A <a href="https://ccaal.dfki.de/2014/02/12/kochbot-and-the-intelligent-kitchen-experience-it-during-this-years-cebit-march-10-14-2014">Smart kitchen</a> consisting of a hob, a sink and an extractor hood;</li>
+                    <li>An EEG cap for the user to wear;</li>
+                    <li>A recipe of pasta pesto (directly from Italy) with the instructions;</li>
+                    <li>A screen to display the instruction steps.</li>
+                </ul>
+
+
+                <img src="kochbot.jpeg" alt="Smart kitchen" style="width: 60%; max-width: 800px; height: auto;">
+                <p style="text-align: center; font-weight: bold;">Smart kitchen</p>
+
+
+                We hard-coded the recipe and the instruction steps. Our instruction interacts directly with the kitchen via a software, controlling induction hob, water in the sink, and an extractor hood.
+                The idea was to allow the user to navigate through the recipe using <b>Imagined Speech</b>. The user has to think of some command, then our classifer recognizes and executes it.
+                
+                <p>Three commands are available for the user: next, back, and repeat.</p>
+
+                <ul>
+                    <li>Next: proceed to the next step of the instruction.</li>
+                    <li>Repeat: repeat the current step.</li>
+                    <li>Back: go one step back in the instruction.</li>
+                </ul>
+
+                <img src="kitchen.png" alt="Interaction Scheme" style="width: 100%; max-width: 800px; height: auto;">
+                <p style="text-align: center; font-weight: bold;">Smart kitchen</p>
+      
+        <!-- </div> -->
+    </section>
+
+
+    <section>
+        <button class="collapsible" id="methodology"><h3 style="color: #7E5BCC;">&#128218 Methodology</h3></button>
+        <div class="content">
+    
+            <h4>Data collection</h4>
+                <ul>
+                    <li>First, we recorded EEG signals from 3 members of our group using a non-wireless 24-channel EEG system with ANT Recorder (sampling rate = 500 Hz);</li>
+                    <li>Each participant was presented with instruction words "next", "back", "repeat" in blocks of 10. Each block was randomly presented 10 times.</li>
+                    <li>We trained a classifier for each participant and performed 10-fold cross-validation on heldout data. Then we proceeded with the participant for whom the classifier's accuracy was the highest.</li>
+                    <!-- Add more list items as needed -->
+                </ul>
+    
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible"><h3 style="color: #7E5BCC;">&#128208 Why use Brain-Computer Interfaces?</h3></button>
+        <div class="content">
+            <p>There are several ways how Brain-Computer Interfaces can facilitate cooking exprience: 
+
+                <ul>
+                    <li>It can be very useful for people with disabilities;</li>
+                    <li>It is often noisy in the kitchen, so voice commands can be difficult to understand. Imagined Speech is a better alternative</li>
+                  </ul></p>                
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 nursaltyn. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var mainSlider = new Swiper('.main-slider', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            centeredSlides: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+        });
+    </script>
+
+<script>
+    var mainSlider = new Swiper('.main-slider-intro', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+    });
+</script>
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
