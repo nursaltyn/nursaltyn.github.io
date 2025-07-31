@@ -157,7 +157,7 @@
             transform: translateY(-50%);
             width: 30px; /* Adjust arrow width */
             height: 30px; /* Adjust arrow height */
-            background-color: #000; /* Arrow background color */
+            background-color: #365996; /* Arrow background color */
             color: #fff; /* Arrow color */
             border-radius: 50%; /* Rounded corners for arrows */
             cursor: pointer;
@@ -221,7 +221,7 @@
             text-align: center;
             margin-top: 20px;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #365996;
             color: white;
             border-radius: 10px; /* Adjust the value to control the corner roundness */
         }
@@ -235,31 +235,27 @@
         <p style="font-style: italic;">A seminar project on Brain-Computer Interfaces.</p>
     </header>
 
-    <nav>
-        <a href="map_top_topics.html">Topics map</a>
-        <a href="map_top_languages.html">Languages map</a>
-        <a href="countries.html">Explore each country</a>
-        <!-- Add more links for additional pages -->
-    </nav>
+    
+
 
     <div class="swiper-container main-slider-intro">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="cover.png" alt="Slide 1">
+            <div class="swiper-slide"><img src="kitchen1.jpg" alt="Slide 1">
                 <div class="slide-description">
-                    <h3><a href="map_top_topics.html">Discover most popular song topics</a></h3>
+                    <h3><a href="map_top_topics.html">Check out the video of the BCI interaction</a></h3>
                 </div>
             </div>
-            <div class="swiper-slide"><img src="cover2.JPG" alt="Slide 2">
+            <div class="swiper-slide"><img src="kitchen2.jpg" alt="Slide 2">
                 <div class="slide-description">
-                    <h3><a href="map_top_languages.html">Compare most popular song languages</a></h3>
+                    <h3><a href="map_top_languages.html">Check out the video of the BCI interaction</a></h3>
                 </div>
             
             </div>
-            <div class="swiper-slide"><img src="cover3.png" alt="Slide 2">
+            <!-- <div class="swiper-slide"><img src="cover3.png" alt="Slide 2">
                 <div class="slide-description">
                     <h3><a href="countries.html">Explore in detail the topics of each country</a></h3>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Add more slides as needed -->
         </div>
@@ -325,20 +321,6 @@
                 <img src="kitchen.png" alt="Interaction Scheme" style="width: 100%; max-width: 800px; height: auto;">
                 <p style="text-align: center; font-weight: bold;">Smart kitchen</p>
       
-
-                <p>As you can see, love in different forms <em>(and money)</em> indeed rules the chart in practically all the countries!</p>
-                   
-
-                <p>However, there were singular cases that diverged from the common topics. I would name them:</p>
-                
-                <li><b>Politics and religion</b> - a topic observed in Egypt</li>
-                <li><b>Violence and conflict</b> - a topic observed in Greece</li>
-
-                <p>Sometimes clusters were also formed of noise and artifacts:</p>
-
-                <li><b>Music and artist names</b></li>
-                <li><b>Untranslated words</b> (for low-resource languages)
-            </p>
         <!-- </div> -->
     </section>
 
@@ -352,28 +334,8 @@
                     <li>First, we recorded EEG signals from 3 members of our group using a non-wireless 24-channel EEG system with ANT Recorder (sampling rate = 500 Hz);</li>
                     <li>Each participant was presented with instruction words "next", "back", "repeat" in blocks of 10. Each block was randomly presented 10 times.</li>
                     <li>We trained a classifier for each participant and performed 10-fold cross-validation on heldout data. Then we proceeded with the participant for whom the classifier's accuracy was the highest.</li>
-                    <li><a href="https://pypi.org/project/pyLDAvis/#:~:text=pyLDAvis%20is%20designed%20to%20help,an%20interactive%20web%2Dbased%20visualization.">pyLDAvis library</a> - to visualize the results;</li>
-                    <li><a href="https://kworb.net/">Kworb.net</a> - for the names of the songs</li>
                     <!-- Add more list items as needed -->
                 </ul>
-
-            <p>The very first results were pretty meaningless (image below), so I had to go through many iterations of preprocessing to start seeing
-                 some coherence it topics.
-            </p>
-
-            <img src="early_result.png" alt="Early results of LDAe" style="width: 100%; max-width: 800px; height: auto;">
-
-            <p>Just like in many other unsupervised methods, in LDA, we can't directly see the name or the topic of 
-                the cluster: instead, we have to label them ourselves.
-                Naming the topics was one of the hardest parts! Click on the results to see what I found out.</p>
-
-            <p><em>*from the moment Spotify entered the country till March 2023</em></p>
-            <p><em>**I also used <b>filter_extremes</b> function from <b>gensim</b> module to eliminate the most common words 
-                (that are met in more than 50% of the documents) and the least common, rather eccentric/too specific 
-                words (that are met in less than 3 documents) – for example, names of the entities, rare words 
-                (like “pathointelligence” or “bermuda triangle”), etc. The function also takes only the top N words from the remaining corpus 
-                (in my case, N was set to 15 000).</em>
-            </p></p>
     
         </div>
     </section>
